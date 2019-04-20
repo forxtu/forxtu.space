@@ -11,7 +11,7 @@ const eslintrc = {
       "config",
       "react-helmet",
       "prop-types"
-    ],
+    ]
   },
   rules: {
     "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
@@ -32,10 +32,6 @@ const eslintrc = {
       { avoidEscape: true, allowTemplateLiterals: true }
     ],
     "comma-dangle": ["error", "never"]
-    "import/no-unresolved": [
-      2, 
-      { "caseSensitive": false }
-    ]
   },
   env: {
     browser: true
