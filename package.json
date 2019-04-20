@@ -57,6 +57,10 @@
     "styled-tools": "^1.7.1",
     "webpack": "^4.19.0"
   },
+  "engines": {
+    "node": ">=10.10.0",
+    "npm": ">=6.9.0"
+  },
   "keywords": [
     "gatsby"
   ],
