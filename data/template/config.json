@@ -1,7 +1,7 @@
 {
   "url": "https://blog.forxtu.xyz",
   "meta": {
-    "favicon": "https://github.com/forxtu/blog.forxtu.xyz/blob/master/static/assets/favicon.png",
+    "favicon": "https://github.com/forxtu/blog.forxtu.xyz/blob/master/static/assets/favicon.png?raw=true",
     "keyword": "forxtu, blog, JavaScript",
     "description": "FORXTU блог о программировании, в основном фронт-енд",
     "theme_color": "#384f7c",
@@ -44,7 +44,7 @@
       "title": "facebook"
     }
   ],
-  "iconUrl": "https://github.com/forxtu/blog.forxtu.xyz/blob/master/static/assets/favicon.png",
+  "iconUrl": "https://github.com/forxtu/blog.forxtu.xyz/blob/master/static/assets/favicon.png?raw=true",
   "wordings": ["Задай свой вопрос о", "Front-end разработке"],
   "gaTrackId": "UA-79963580-4",
   "navbarList": [
