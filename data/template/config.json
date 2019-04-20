@@ -1,0 +1,83 @@
+{
+  "url": "https://blog.forxtu.xyz",
+  "meta": {
+    "favicon": "⬛️",
+    "keyword": "forxtu, blog, JavaScript",
+    "description": "FORXTU блог о программировании, в основном фронт-енд",
+    "theme_color": "#384f7c",
+    "google_site_verification": "riZBcestky7i9xY__A-5J-2EE65T75X1u-zgbss37Io"
+  },
+  "name": "forxtu",
+  "about": "",
+  "email": "forxtu.official@gmail.com",
+  "stats": {
+    "image": "",
+    "title": "Денис М.",
+    "description": "Фронт-енд разработчик"
+  },
+  "title": "FORXTU",
+  "gitalk": {
+    "repo": "",
+    "admin": [""],
+    "owner": "",
+    "clientID": "",
+    "clientSecret": "",
+    "pagerDirection": "first",
+    "distractionFreeMode": true
+  },
+  "License": "by",
+  "friends": [
+    {
+      "href": "https://github.com/forxtu",
+      "title": "github"
+    },
+    {
+      "href": "https://instagram.com/forxtu",
+      "title": "instagram"
+    },
+    {
+      "href": "http://twitter.com/forxtu",
+      "title": "twitter"
+    },
+    {
+      "href": "https://facebook.com/forxtu",
+      "title": "facebook"
+    }
+  ],
+  "iconUrl": "⬛️",
+  "wordings": ["Задай свой вопрос о", "Front-end разработке"],
+  "gaTrackId": "UA-84737574-3",
+  "navbarList": [
+    {
+      "href": "",
+      "title": "Главная статья"
+    },
+    {
+      "href": "/guestbook/",
+      "title": "Дневник гостей"
+    },
+    {
+      "href": "/tags/",
+      "title": "Теги"
+    },
+    {
+      "href": "",
+      "title": "Обо мне"
+    }
+  ],
+  "redirectors": [
+    {
+      "toPath": "",
+      "fromPath": "/about/"
+    }
+  ],
+  "gaOptimizeId": "GTM-WHP7SC5",
+  "carouselItems": [
+    {
+      "src": "",
+      "target": "/stats/"
+    }
+  ],
+  "githubUsername": "forxtu",
+  "maxPostsInPage": 10
+}
