@@ -5,6 +5,7 @@ title: Гостевая книга
 slug: /guestbook
 date: 2019-04-19
 description: ""
+headerImage: https://github.com/forxtu/blog.forxtu.xyz/blob/master/static/assets/nightjpg.jpg
 tags:
   - Другое
 ---
