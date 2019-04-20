@@ -17,11 +17,11 @@
   },
   "title": "FORXTU",
   "gitalk": {
-    "repo": "",
-    "admin": [""],
-    "owner": "",
-    "clientID": "",
-    "clientSecret": "",
+    "repo": "blog.forxtu.xyz",
+    "admin": ["forxtu"],
+    "owner": "forxtu",
+    "clientID": "3da39e42d67bbd8de515",
+    "clientSecret": "0ae4b68264facf3b49ffb8eb6d7b4bb3493aabf1",
     "pagerDirection": "first",
     "distractionFreeMode": true
   },
