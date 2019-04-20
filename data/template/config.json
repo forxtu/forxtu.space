@@ -1,83 +1,60 @@
 {
-  "url": "https://blog.forxtu.xyz",
+  "License": "by",
   "meta": {
-    "favicon": "⬛️",
+    "favicon": "https://github.com/forxtu/blog.forxtu.xyz/blob/master/static/assets/favicon.png",
     "keyword": "forxtu, blog, JavaScript",
     "description": "FORXTU блог о программировании, в основном фронт-енд",
     "theme_color": "#384f7c",
     "google_site_verification": "riZBcestky7i9xY__A-5J-2EE65T75X1u-zgbss37Io"
   },
   "name": "forxtu",
-  "about": "",
-  "email": "forxtu.official@gmail.com",
-  "stats": {
-    "image": "",
-    "title": "Денис М.",
-    "description": "Фронт-енд разработчик"
-  },
-  "title": "FORXTU",
-  "gitalk": {
-    "repo": "blog.forxtu.xyz",
-    "admin": ["forxtu"],
-    "owner": "forxtu",
-    "clientID": "3da39e42d67bbd8de515",
-    "clientSecret": "0ae4b68264facf3b49ffb8eb6d7b4bb3493aabf1",
-    "pagerDirection": "first",
-    "distractionFreeMode": true
-  },
-  "License": "by",
-  "friends": [
-    {
-      "href": "https://github.com/forxtu",
-      "title": "github"
-    },
-    {
-      "href": "https://instagram.com/forxtu",
-      "title": "instagram"
-    },
-    {
-      "href": "http://twitter.com/forxtu",
-      "title": "twitter"
-    },
-    {
-      "href": "https://facebook.com/forxtu",
-      "title": "facebook"
-    }
-  ],
-  "iconUrl": "⬛️",
-  "wordings": ["Задай свой вопрос о", "Front-end разработке"],
   "gaTrackId": "UA-84737574-3",
+  "about": "Ресурс о программировании в целом и фронт-енд разработке в частности. Советы и подробные руководства к действию для новичков - как начать свой путь в программировании, с чего начать и как продолжить. А также продвинутые и не очевидные темы для продвинутых кодеров.",
   "navbarList": [
     {
-      "href": "",
-      "title": "Главная статья"
+      "title": "Главная статья",
+      "href": "/"
     },
     {
-      "href": "/guestbook/",
-      "title": "Дневник гостей"
+      "title": "Дневник гостей",
+      "href": "/guestbook/"
     },
     {
-      "href": "/tags/",
-      "title": "Теги"
+      "title": "Теги",
+      "href": "/tags/"
     },
     {
-      "href": "",
-      "title": "Обо мне"
+      "title": "Обо мне",
+      "href": "/"
     }
   ],
+  "url": "https://blog.forxtu.xyz",
+  "gaOptimizeId": "GTM-WHP7SC5",
   "redirectors": [
     {
-      "toPath": "",
-      "fromPath": "/about/"
+      "fromPath": "/about/",
+      "toPath": "/"
     }
   ],
-  "gaOptimizeId": "GTM-WHP7SC5",
-  "carouselItems": [
+  "friends": [
     {
-      "src": "",
-      "target": "/stats/"
+      "title": "github",
+      "href": "https://github.com/forxtu"
+    },
+    {
+      "title": "instagram",
+      "href": "https://instagram.com/forxtu"
+    },
+    {
+      "title": "twitter",
+      "href": "http://twitter.com/forxtu"
+    },
+    {
+      "title": "facebook",
+      "href": "https://facebook.com/forxtu"
     }
   ],
-  "githubUsername": "forxtu",
-  "maxPostsInPage": 10
+  "iconUrl": "https://github.com/forxtu/blog.forxtu.xyz/blob/master/static/assets/favicon.png",
+  "title": "FORXTU",
+  "email": "forxtu.official@gmail.com"
 }
