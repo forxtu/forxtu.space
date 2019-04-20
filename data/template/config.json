@@ -1,14 +1,14 @@
 {
   "url": "https://blog.forxtu.xyz",
   "meta": {
-    "favicon": "⬛️",
+    "favicon": "https://github.com/forxtu/blog.forxtu.xyz/blob/master/static/assets/favicon.png",
     "keyword": "forxtu, blog, JavaScript",
     "description": "FORXTU блог о программировании, в основном фронт-енд",
     "theme_color": "#384f7c",
-    "google_site_verification": "riZBcestky7i9xY__A-5J-2EE65T75X1u-zgbss37Io"
+    "google_site_verification": ""
   },
   "name": "forxtu",
-  "about": "",
+  "about": "Ресурс о программировании в целом и фронт-енд разработке в частности. Советы и подробные руководства к действию для новичков - как начать свой путь в программировании, с чего начать и как продолжить. А также продвинутые и не очевидные темы для продвинутых кодеров.",
   "email": "forxtu.official@gmail.com",
   "stats": {
     "image": "",
@@ -44,12 +44,12 @@
       "title": "facebook"
     }
   ],
-  "iconUrl": "⬛️",
+  "iconUrl": "https://github.com/forxtu/blog.forxtu.xyz/blob/master/static/assets/favicon.png",
   "wordings": ["Задай свой вопрос о", "Front-end разработке"],
-  "gaTrackId": "UA-84737574-3",
+  "gaTrackId": "UA-79963580-4",
   "navbarList": [
     {
-      "href": "",
+      "href": "/",
       "title": "Главная статья"
     },
     {
@@ -61,17 +61,17 @@
       "title": "Теги"
     },
     {
-      "href": "",
+      "href": "/",
       "title": "Обо мне"
     }
   ],
   "redirectors": [
     {
-      "toPath": "",
+      "toPath": "/",
       "fromPath": "/about/"
     }
   ],
-  "gaOptimizeId": "GTM-WHP7SC5",
+  "gaOptimizeId": "",
   "carouselItems": [
     {
       "src": "",
