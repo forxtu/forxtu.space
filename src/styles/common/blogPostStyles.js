@@ -91,13 +91,20 @@ export const GitalkContainer = styled.div`
     }
   }
 
+  .gt-popup {
+    background-color: ${theme("colors.content.gitalk.popup.bg")} !important;
+    border-color: ${theme("colors.content.gitalk.popup.border")} !important;
+  }
+
   .gt-header-preview.markdown-body,
   .gt-header-textarea {
     background: ${theme("colors.content.gitalk.commentBg")} !important;
+    color: ${theme("colors.text.default")} !important;
   }
 
   .gt-header-controls {
-    .gt-btn-login {
+    .gt-btn-login,
+    .gt-btn-public {
       background-color: ${theme("colors.content.gitalk.loginBg")} !important;
       border-color: ${theme("colors.content.gitalk.loginBg")} !important;
     }

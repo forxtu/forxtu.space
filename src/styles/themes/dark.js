@@ -28,7 +28,6 @@ const {
     black,
     darkGrey,
     lightGrey,
-    darkSeaGreen,
     white,
     salmon,
     sunny,
@@ -80,7 +79,11 @@ dark.colors = {
       commentHoverShadow: salmon,
       loginBg: salmon,
       editBg: themeColors.layoutBg,
-      svg: salmon
+      svg: salmon,
+      popup: {
+        bg: themeColors.itemBg,
+        border: darkGrey
+      }
     }
   },
   shareBox: {

@@ -28,7 +28,6 @@ const {
     grey,
     darkGrey,
     lightGrey,
-    darkSeaGreen,
     white,
     black,
     salmon,
@@ -80,7 +79,11 @@ light.colors = {
       commentHoverShadow: salmon,
       loginBg: lightSeaGreen,
       editBg: white,
-      svg: black
+      svg: black,
+      popup: {
+        bg: white,
+        border: lightGrey
+      }
     }
   },
   shareBox: {
