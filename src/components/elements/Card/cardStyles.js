@@ -3,6 +3,8 @@ import { theme } from "styled-tools";
 import { Link } from "gatsby";
 
 export const Wrapper = styled.div`
+  background-color: ${({ color }) => color};
+  background-image: url(${({ headerImage }) => headerImage});
   background-position: center;
   @media (min-width: 576px) {
     min-height: 15rem;

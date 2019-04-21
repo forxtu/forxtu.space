@@ -2,9 +2,6 @@ import React from "react";
 import { Link } from "gatsby";
 import { string, arrayOf } from "prop-types";
 
-// utils
-import { parseImgur } from "api/images";
-
 // styles
 import {
   Wrapper,
@@ -22,14 +19,9 @@ import {
 import Tag from "components/elements/Tag";
 import StyledLink from "components/elements/StyledLink";
 
-const imageStyle = (headerImage, color) => ({
-  backgroundColor: `#${color}`,
-  backgroundImage: ` url(${parseImgur(headerImage, "large")})`
-});
-
 const CardHeader = ({ url, image, backgroundColor }) => (
   <Link to={url} href={url}>
-    <Wrapper style={imageStyle(image, backgroundColor)} />
+    <Wrapper headerImage={image} color={backgroundColor} />
   </Link>
 );
 
@@ -64,6 +56,7 @@ const Card = ({
           </StyledTitle>
           <Description>{description}</Description>
           <StyledLink to={url} href={url}>
+
             Читать далее
           </StyledLink>
         </Content>
