@@ -1,5 +1,6 @@
-import React, { Component, useEffect } from "react";
+import React, { useEffect } from "react";
 import { graphql } from "gatsby";
+import { object } from "prop-types";
 
 // hooks
 import { useTheme } from "src/ThemeContext";
@@ -96,6 +97,10 @@ const BlogPost = ({ data }) => {
       />
     </S.PostWrapper>
   );
+};
+
+BlogPost.propTypes = {
+  data: object.isRequired
 };
 
 export const pageQuery = graphql`

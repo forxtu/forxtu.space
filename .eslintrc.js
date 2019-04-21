@@ -14,6 +14,8 @@ const eslintrc = {
     ]
   },
   rules: {
+    "react/forbid-prop-types": 0,
+    "object-curly-newline": 0,
     "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
     "no-shadow": "warn",
     "no-console": 0,
@@ -24,14 +26,15 @@ const eslintrc = {
       { "web.js": "never", json: "never", css: "always" }
     ],
     "import/no-extraneous-dependencies": [2, { devDependencies: true }],
-    "import/no-unresolved": [2, { ignore: ["antd"] }],
+    "import/no-unresolved": [0, { ignore: ["antd"] }],
     "no-underscore-dangle": ["error", { allow: ["_id"] }],
     quotes: [
       "error",
       "double",
       { avoidEscape: true, allowTemplateLiterals: true }
     ],
-    "comma-dangle": ["error", "never"]
+    "comma-dangle": ["error", "never"],
+    "import/order": 0
   },
   env: {
     browser: true
