@@ -17,6 +17,10 @@ const HTML = ({
         name="viewport"
         content="width=device-width, initial-scale=1, shrink-to-fit=no"
       />
+      <meta
+        name="google-site-verification"
+        content="Qt-VT3iFNkYhuGwBDYdD-eA7xeOjaCtgOPyPL6yB6Dc"
+      />
       <link
         href="https://fonts.googleapis.com/css?family=Didact+Gothic|Roboto+Slab:300,400,700&amp;subset=cyrillic,cyrillic-ext"
         rel="stylesheet"
