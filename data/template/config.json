@@ -1,11 +1,11 @@
 {
-  "url": "https://blog.forxtu.xyz",
+  "url": "https://forxtu.space",
   "meta": {
-    "favicon": "https://github.com/forxtu/blog.forxtu.xyz/blob/master/static/assets/favicon.png?raw=true",
+    "favicon": "https://raw.githubusercontent.com/forxtu/forxtu.space/master/static/assets/favicon.png",
     "keyword": "forxtu, blog, JavaScript",
     "description": "FORXTU блог о программировании, в основном фронт-енд",
     "theme_color": "#384f7c",
-    "google_site_verification": "2biwpjGwZxaPFXxe7eq-88Vwlf1QRbRZ4VMfd68BVs4"
+    "google_site_verification": "Qt-VT3iFNkYhuGwBDYdD-eA7xeOjaCtgOPyPL6yB6Dc"
   },
   "name": "forxtu",
   "about": "Ресурс о программировании в целом и фронт-енд разработке в частности. Советы и подробные руководства к действию для новичков - как начать свой путь в программировании, с чего начать и как продолжить. А также продвинутые и не очевидные темы для продвинутых кодеров.",
@@ -17,7 +17,7 @@
   },
   "title": "FORXTU",
   "gitalk": {
-    "repo": "blog.forxtu.xyz",
+    "repo": "forxtu.space",
     "admin": ["forxtu"],
     "owner": "forxtu",
     "clientID": "3da39e42d67bbd8de515",
@@ -44,7 +44,7 @@
       "title": "facebook"
     }
   ],
-  "iconUrl": "https://github.com/forxtu/blog.forxtu.xyz/blob/master/static/assets/favicon.png?raw=true",
+  "iconUrl": "https://raw.githubusercontent.com/forxtu/forxtu.space/master/static/assets/favicon.png",
   "wordings": ["Задай свой вопрос о", "Front-end разработке"],
   "gaTrackId": "UA-79963580-4",
   "navbarList": [
