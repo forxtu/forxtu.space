@@ -12,6 +12,8 @@ headerImage: >-
   https://raw.githubusercontent.com/forxtu/blog.forxtu.xyz/master/static/assets/517668112.jpg
 templateKey: blog-post
 ---
+### Зачем?
+
 Эта страница предназначена для общения, вопросов автору, пожеланий и праведного хейта (куда же без него).
 
 ### Как начать?
