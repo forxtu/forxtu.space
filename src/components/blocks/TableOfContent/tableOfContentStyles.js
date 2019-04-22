@@ -17,7 +17,7 @@ export const Wrapper = styled(Col)`
     ul {
       padding-left: 8px;
       li {
-        list-style-type: none;
+        list-style-type: disc;
 
         p {
           margin-bottom: 0;
