@@ -98,7 +98,12 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Header Image", name: "headerImage", widget: "string" }
+      - {
+          label: "Header Image",
+          name: "headerImage",
+          widget: "string",
+          required: false,
+        }
       - {
           label: "Template Key",
           hint: "If you don't know which template to provide type - blog-post",
