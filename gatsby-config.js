@@ -5,7 +5,7 @@ module.exports = {
   siteMetadata: {
     title: "FORXTU Blog",
     description: "Блог о фронт-енд разработке и программировании - FORXTU",
-    siteUrl: "https://blog.forxtu.xyz",
+    siteUrl: "https://forxtu.space",
     author: "Dennis FORXTU Merkulov"
   },
   plugins: [
