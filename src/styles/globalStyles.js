@@ -40,9 +40,9 @@ const GlobalStyles = createGlobalStyle`
 
   ul,
   ol {
-    padding-left: 0;
     margin: 0;
-    list-style: none;
+    list-style: inherit;
+    padding-left: 20px;
   }
 
   @media (min-width: 1024px) {
