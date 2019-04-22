@@ -49,10 +49,6 @@
   "gaTrackId": "UA-79963580-4",
   "navbarList": [
     {
-      "href": "/",
-      "title": "Главная статья"
-    },
-    {
       "href": "/guestbook/",
       "title": "Дневник гостей"
     },
@@ -61,14 +57,14 @@
       "title": "Теги"
     },
     {
-      "href": "/",
-      "title": "Обо мне"
+      "href": "/about/",
+      "title": "О проекте"
     }
   ],
   "redirectors": [
     {
       "toPath": "/",
-      "fromPath": "/about/"
+      "fromPath": "/"
     }
   ],
   "gaOptimizeId": "GTM-WF5Z4GC",
