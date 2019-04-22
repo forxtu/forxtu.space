@@ -22,8 +22,10 @@ const Footer = () => (
       <Row>
         <Col sm={12} className="text-center">
           <Copyright>
+
             Copyright&nbsp;
-            <ExternalLink href="https://forxtu.xyz/" title="&copy;FORXTU" />
+            <ExternalLink href="https://forxtu.space/" title="&copy;FORXTU" />
+
             &nbsp;
             {new Date().getFullYear()}
           </Copyright>
