@@ -21,6 +21,7 @@ const HTML = ({
         name="google-site-verification"
         content="Qt-VT3iFNkYhuGwBDYdD-eA7xeOjaCtgOPyPL6yB6Dc"
       />
+      <meta name="yandex-verification" content="e0fed3f667075fc3" />
       <link
         href="https://fonts.googleapis.com/css?family=Didact+Gothic|Roboto+Slab:300,400,700&amp;subset=cyrillic,cyrillic-ext"
         rel="stylesheet"
