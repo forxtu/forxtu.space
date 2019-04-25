@@ -4,6 +4,7 @@ os:
   - linux
 dist: trusty
 cache:
+  yarn: true
   directories:
     - node_modules
   # use container-based build env for faster boot
@@ -15,16 +16,16 @@ language: node_js
 node_js:
   - "10"
 
-before_install: npm install -g greenkeeper-lockfile
+before_install: yarn global add greenkeeper-lockfile
 install:
   - git clone https://github.com/$TRAVIS_REPO_SLUG.git $TRAVIS_REPO_SLUG
   - cd $TRAVIS_REPO_SLUG
   - git checkout -qf $TRAVIS_COMMIT
-  - case $TRAVIS_BRANCH in greenkeeper*) npm i;; *) npm ci;; esac;
+  - case $TRAVIS_BRANCH in greenkeeper*) yarn install;; *) esac;
 
 before_script: greenkeeper-lockfile-update
 after_script: greenkeeper-lockfile-upload
 
 script:
-  - npm install
-  - npm run build
+  - yarn install
+  - yarn run build
