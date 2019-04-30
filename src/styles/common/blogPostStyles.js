@@ -31,6 +31,7 @@ export const ContentWrapper = styled(Col)`
 
   h2 {
     font-weight: 600;
+    margin-bottom: 25px;
   }
 
   a {
@@ -38,6 +39,10 @@ export const ContentWrapper = styled(Col)`
     &:hover {
       color: ${theme("colors.text.link")};
     }
+  }
+
+  img {
+    width: 100%;
   }
 
   blockquote {
