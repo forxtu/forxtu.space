@@ -97,20 +97,20 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "FORXTU Blog",
+        name: "FORXTU Blog about programming",
         short_name: "FORXTU",
         start_url: "/",
-        background_color: "#ededed",
-        theme_color: "#384f7c",
+        background_color: "#000",
+        theme_color: "#aeaeae",
         display: "standalone",
         icons: [
           {
-            src: "/favicons/android-chrome-192x192.png",
+            src: "/favicons/android-forxtu-192x192.png",
             sizes: "192x192",
             type: "image/png"
           },
           {
-            src: "/favicons/android-chrome-512x512.png",
+            src: "/favicons/android-forxtu-512x512.png",
             sizes: "512x512",
             type: "image/png"
           }
