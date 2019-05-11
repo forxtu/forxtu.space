@@ -36,7 +36,7 @@ const schemaOrgJSONLD = ({
         }
       ]
     }
-    : null,
+    : {},
   isPost
     ? {
       "@context": "http://schema.org",
@@ -51,7 +51,7 @@ const schemaOrgJSONLD = ({
       },
       description
     }
-    : null
+    : {}
 ];
 
 const SEO = ({ url, title, description, image, siteTitleAlt, isPost }) => (
