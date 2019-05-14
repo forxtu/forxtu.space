@@ -3,8 +3,8 @@ module.exports = ({ plugins, actions }) => {
     plugins: [
       plugins.contextReplacement(
         /highlight\.js\/lib\/languages$/,
-        new RegExp(`^./(${['javascript', 'bash'].join('|')})$`),
-      ),
-    ],
+        new RegExp(`^./(${["javascript", "bash"].join("|")})$`)
+      )
+    ]
   });
 };

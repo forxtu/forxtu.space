@@ -4,7 +4,7 @@ const useScrollHandler = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
   const [isHidden, setIsHidden] = useState(true);
 
-  const handleScroll = e => {
+  const handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
     const visible = prevScrollPos > currentScrollPos;
 
