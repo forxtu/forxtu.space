@@ -44,7 +44,7 @@ module.exports = ({ actions, graphql }) => {
 
       let $path = fields.slug;
       if (slug) {
-        $path = slug;
+        $path = `${slug}/`;
       }
 
       const component = templateKey || "blog-post";
@@ -63,7 +63,7 @@ module.exports = ({ actions, graphql }) => {
 
     return tagSet.forEach(tag => {
       createPage({
-        path: `/tag/${tag}`,
+        path: `/tag/${tag}/`,
         component: path.resolve("src/templates/tag.js"),
         context: {
           tag
