@@ -51,7 +51,7 @@ const Card = ({
               <Tag name={name} key={name} />
             ))}
           </Stats>
-          <StyledTitle to={url} href={url}>
+          <StyledTitle to={`${url}/`} href={`${url}/`}>
             <Title>{title}</Title>
           </StyledTitle>
           <Description>{description}</Description>
