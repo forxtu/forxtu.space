@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const toLower = urlVal => `${urlVal.toLowerCase()}/`;
+const toLower = urlVal => urlVal && `${urlVal.toLowerCase()}/`;
 
 const LatestPost = ({ posts }) => (
   <Wrapper>
