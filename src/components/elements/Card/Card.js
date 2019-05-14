@@ -38,7 +38,7 @@ const Card = ({
     <CustomCard>
       {headerImage && (
         <CardHeader
-          url={url}
+          url={`${url}/`}
           image={headerImage}
           backgroundColor={headerBackgroundColor}
         />
@@ -55,7 +55,7 @@ const Card = ({
             <Title>{title}</Title>
           </StyledTitle>
           <Description>{description}</Description>
-          <StyledLink to={url} href={url}>
+          <StyledLink to={`${url}/`} href={`${url}/`}>
 
             Читать далее
           </StyledLink>

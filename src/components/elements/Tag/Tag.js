@@ -13,9 +13,18 @@ const StyledTag = styled.a`
 `;
 
 const Tag = ({ name, count }) => (
-  <StyledTag href={`/tag/${name}`}>
-    #{name}
-    {count > 0 && <span> - ({count})</span>}
+  <StyledTag href={`/tag/${name.toLowerCase()}/`}>
+
+    #
+    {name}
+    {count > 0 && (
+    <span>
+      {" "}
+- (
+      {count}
+)
+    </span>
+    )}
   </StyledTag>
 );
 

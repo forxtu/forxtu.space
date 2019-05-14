@@ -12,18 +12,29 @@ const Wrapper = styled.div`
   }
 `;
 
+const toLower = urlVal => `${urlVal.toLowerCase()}/`;
+
 const LatestPost = ({ posts }) => (
   <Wrapper>
     <Text.Title>Последние статьи</Text.Title>
-    {posts.map(({ node }) => (
-      <TextLink
-        to={node.frontmatter.url || node.frontmatter.slug || node.fields.slug}
-        key={node.frontmatter.url || node.frontmatter.slug || node.fields.slug}
-        href={node.frontmatter.url || node.frontmatter.slug || node.fields.slug}
-      >
-        {node.frontmatter.title}
-      </TextLink>
-    ))}
+    {posts.map(
+      ({
+        node: {
+          fields: { slug: fieldsSlug }
+        },
+        node: {
+          frontmatter: { url, slug, title }
+        }
+      }) => (
+        <TextLink
+          to={toLower(url) || toLower(slug) || toLower(fieldsSlug)}
+          key={toLower(url) || toLower(slug) || toLower(fieldsSlug)}
+          href={toLower(url) || toLower(slug) || toLower(fieldsSlug)}
+        >
+          {title}
+        </TextLink>
+      )
+    )}
   </Wrapper>
 );
 
