@@ -63,7 +63,7 @@ module.exports = ({ actions, graphql }) => {
 
     return tagSet.forEach(tag => {
       createPage({
-        path: `/tag/${tag}/`,
+        path: `/tag/${tag.toLowerCase()}/`,
         component: path.resolve("src/templates/tag.js"),
         context: {
           tag
