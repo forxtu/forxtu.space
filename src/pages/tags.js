@@ -1,7 +1,11 @@
 import React from "react";
 import { graphql } from "gatsby";
+import { object } from "prop-types";
 import styled from "styled-components";
 import { Container, Row, Col } from "styled-bootstrap-grid";
+
+// hooks
+import useGetTags from "src/hooks/useGetTags";
 
 // styles
 import { PageTitle } from "styles/common/globalWrappers";
@@ -20,39 +24,24 @@ const StyledRow = styled(Row)`
 `;
 
 const TagPage = ({ data }) => {
-  const { allMarkdownRemark } = data;
-
-  const mapping = {};
-
-  allMarkdownRemark.edges.forEach(({ node }) => {
-    const { tags } = node.frontmatter;
-    tags.forEach(name => {
-      if (mapping[name]) {
-        mapping[name] += 1;
-      } else {
-        mapping[name] = 1;
-      }
-    });
-  });
-
-  const tags = Array.from(Object.keys(mapping)).sort(
-    (b, a) => mapping[a] - mapping[b]
-  );
+  const { tags, mapping } = useGetTags(data.allMarkdownRemark);
 
   return (
     <StyledContainer>
       <Row>
         <Col>
           <PageTitle>
-            Всего тегов: <b>{tags.length}</b>
+
+            Всего тегов:
+            <b>{tags.length}</b>
           </PageTitle>
         </Col>
       </Row>
 
       <StyledRow>
-        {tags.map(item => (
-          <Text.H3Title>
-            <Tag name={item} key={item} count={mapping[item]} />
+        {tags.map(tag => (
+          <Text.H3Title key={tag}>
+            <Tag name={tag} key={tag} count={mapping[tag]} />
           </Text.H3Title>
         ))}
       </StyledRow>
@@ -70,6 +59,10 @@ const TagPage = ({ data }) => {
 };
 
 export default TagPage;
+
+TagPage.propTypes = {
+  data: object.isRequired
+};
 
 export const pageQuery = graphql`
   query getAllTags {
