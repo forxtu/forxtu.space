@@ -49,12 +49,16 @@
   "gaTrackId": "UA-79963580-4",
   "navbarList": [
     {
-      "href": "/guestbook/",
-      "title": "Дневник гостей"
+      "href": "/blog/",
+      "title": "Все статьи"
     },
     {
       "href": "/tags/",
       "title": "Теги"
+    },
+    {
+      "href": "/guestbook/",
+      "title": "Дневник гостей"
     },
     {
       "href": "/about/",

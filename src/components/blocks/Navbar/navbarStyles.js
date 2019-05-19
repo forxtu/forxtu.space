@@ -15,6 +15,7 @@ export const NavbarWrapper = styled.nav`
     color: black;
     background: transparent;
     font-size: ${theme("sizes.fonts.largeValues")};
+    padding-left: 0;
 
     ${BrandLogo} {
       background: ${theme("colors.header.logo.bg")};
@@ -33,7 +34,14 @@ export const NavbarToggler = styled.button`
   border: 0;
   color: ${theme("colors.text.default")};
   cursor: pointer;
+  margin-right: 20px;
 `;
 
-export const CollapsedMenuWrapper = styled.div``;
+export const MenuWrapper = styled.div`
+  display: flex;
+`;
+
+export const CollapsedMenuWrapper = styled.div`
+  margin-right: 20px;
+`;
 export const CollapsedMenuUl = styled.ul``;

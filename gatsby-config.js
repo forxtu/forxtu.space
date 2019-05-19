@@ -86,6 +86,13 @@ module.exports = {
       resolve: "gatsby-plugin-sitemap"
     },
     {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint:
+          "https://gmail.us20.list-manage.com/subscribe/post?u=d0739a96ccf67400f90ad5dae&amp;id=b2226fb1af"
+      }
+    },
+    {
       resolve: "gatsby-plugin-sentry",
       options: {
         dsn: "https://dbb69766a0934405bcd6a8fbe2d0942b@sentry.io/1448427"

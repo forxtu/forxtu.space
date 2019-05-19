@@ -39,31 +39,33 @@ const Navbar = () => (
       >
         <S.BrandLogo className="brand-logo">FORXTU</S.BrandLogo>
       </S.NavbarBrand>
-      <ThemeToggler />
-      <S.NavbarToggler
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-      >
-        <FontAwesomeIcon icon={faBars} />
-      </S.NavbarToggler>
       <GithubCorner url="https://github.com/forxtu/forxtu.space" />
-      <S.CollapsedMenuWrapper
-        className="collapse navbar-collapse flex-row-reverse"
-        id="navbarSupportedContent"
-      >
-        <S.CollapsedMenuUl className="navbar-nav mr-2">
-          {navbarList.map(item => (
-            <NavItem
-              url={item.href}
-              name={item.title}
-              list={item.list}
-              key={item.href}
-            />
-          ))}
-        </S.CollapsedMenuUl>
-      </S.CollapsedMenuWrapper>
+      <S.MenuWrapper>
+        <S.NavbarToggler
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+        >
+          <FontAwesomeIcon icon={faBars} />
+        </S.NavbarToggler>
+        <S.CollapsedMenuWrapper
+          className="collapse navbar-collapse flex-row-reverse"
+          id="navbarSupportedContent"
+        >
+          <S.CollapsedMenuUl className="navbar-nav mr-2">
+            {navbarList.map(item => (
+              <NavItem
+                url={item.href}
+                name={item.title}
+                list={item.list}
+                key={item.href}
+              />
+            ))}
+          </S.CollapsedMenuUl>
+        </S.CollapsedMenuWrapper>
+        <ThemeToggler />
+      </S.MenuWrapper>
     </Container>
   </S.NavbarWrapper>
 );
