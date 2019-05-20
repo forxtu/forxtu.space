@@ -47,7 +47,7 @@ const Subscribe = () => {
       <Text.H5Title>
         Отписаться можно в <i>любое</i> время
       </Text.H5Title>
-      <ToastContainer />
+      <ToastContainer position="bottom-right" />
     </CardWrapper>
   );
 };
