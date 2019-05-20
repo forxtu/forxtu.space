@@ -5,6 +5,7 @@ import { string, arrayOf } from "prop-types";
 // styles
 import {
   Wrapper,
+  CardWrapper,
   CustomCard,
   Data,
   Content,
@@ -34,7 +35,7 @@ const Card = ({
   description,
   tags
 }) => (
-  <div className="col-sm-12 pb-4">
+  <CardWrapper>
     <CustomCard>
       {headerImage && (
         <CardHeader
@@ -56,28 +57,30 @@ const Card = ({
           </StyledTitle>
           <Description>{description}</Description>
           <StyledLink to={`${url}/`} href={`${url}/`}>
-
             Читать далее
           </StyledLink>
         </Content>
       </Data>
     </CustomCard>
-  </div>
+  </CardWrapper>
 );
 
 Card.propTypes = {
-  title: string.isRequired,
+  title: string,
   date: string,
-  url: string.isRequired,
+  url: string,
   headerImage: string,
   headerBackgroundColor: string,
-  description: string.isRequired,
+  description: string,
   tags: arrayOf(string)
 };
 
 CardHeader.propTypes = Card.propTypes;
 
 Card.defaultProps = {
+  title: "",
+  url: "",
+  description: "",
   headerImage: "",
   tags: [],
   date: "",

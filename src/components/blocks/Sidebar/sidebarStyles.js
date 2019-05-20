@@ -9,7 +9,7 @@ export const AvatarBlock = styled.div``;
 export const StyledHeader = styled.header`
   background: ${theme("colors.sidebar.bg")};
   padding: 0 15px 15px 15px;
-  box-shadow: 5px 5px 0px 0 ${theme("colors.sidebar.boxShadow")};
+  box-shadow: 2px 2px 0px 0 ${theme("colors.sidebar.boxShadow")};
   border: 1px solid ${theme("colors.sidebar.border")};
   height: 100%;
   @media (max-width: 992px) {

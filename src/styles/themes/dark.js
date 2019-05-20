@@ -9,6 +9,7 @@ dark.palette = {
   salmon: "#ff6f6f",
   ivory: "#FFFFF2",
   sunny: "#eaeac4",
+  lightSunny: "#f9f9aa",
   darkSeaGreen: "#24ada3",
   powderBlue: "#AEE5D8",
   white: "#fff",
@@ -31,6 +32,7 @@ const {
     white,
     salmon,
     sunny,
+    lightSunny,
     ivory,
     blackOpacity,
     themeColors
@@ -45,7 +47,7 @@ dark.colors = {
     link: sunny,
     linkBlack: white
   },
-  highlight: salmon,
+  highlight: lightSunny,
   header: {
     bg: themeColors.itemBg,
     navItem: ivory,
@@ -71,6 +73,20 @@ dark.colors = {
     bg: themeColors.itemBg,
     border: darkGrey,
     boxShadow: blackOpacity
+  },
+  form: {
+    border: sunny,
+    boxShadow: lightSunny
+  },
+  button: {
+    bg: darkGrey,
+    border: sunny,
+    text: sunny,
+    inverted: {
+      bg: sunny,
+      border: lightSunny,
+      text: black
+    }
   },
   content: {
     border: sunny,

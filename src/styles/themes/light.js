@@ -72,6 +72,20 @@ light.colors = {
     border: lightGrey,
     boxShadow: grey
   },
+  form: {
+    border: lightSeaGreen,
+    boxShadow: lightSeaGreen
+  },
+  button: {
+    bg: white,
+    border: lightSeaGreen,
+    text: lightSeaGreen,
+    inverted: {
+      bg: lightSeaGreen,
+      border: lightSeaGreen,
+      text: white
+    }
+  },
   content: {
     border: powderBlue,
     gitalk: {

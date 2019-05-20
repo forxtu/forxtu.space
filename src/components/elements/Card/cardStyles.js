@@ -29,12 +29,12 @@ export const Wrapper = styled.div`
 
 export const CustomCard = styled.div`
   background: ${theme("colors.card.bg")};
-  box-shadow: 5px 5px 0px 0 ${theme("colors.card.boxShadow")};
+  box-shadow: 2px 2px 0px 0 ${theme("colors.card.boxShadow")};
   transition: 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
   border: 1px solid ${theme("colors.card.border")};
 
   &:hover {
-    box-shadow: 0 3px 0 0 ${theme("colors.card.boxShadow")};
+    box-shadow: 0 1px 0 0 ${theme("colors.card.boxShadow")};
     transform: translateY(-5px);
   }
 `;
@@ -43,6 +43,10 @@ export const Date = styled.span`
   margin-right: 20px;
   border-bottom: 3px solid ${theme("colors.highlight")};
   color: ${theme("colors.text.default")};
+`;
+
+export const CardWrapper = styled.div`
+  padding-bottom: 20px;
 `;
 
 export const Content = styled.div``;

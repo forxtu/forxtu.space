@@ -14,6 +14,7 @@ const eslintrc = {
     ]
   },
   rules: {
+    "react/jsx-one-expression-per-line": 0,
     "import/prefer-default-export": 0,
     "arrow-parens": 0,
     "react/forbid-prop-types": 0,

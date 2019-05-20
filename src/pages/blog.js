@@ -14,7 +14,7 @@ import Card from "components/elements/Card";
 import Text from "components/elements/Text";
 import { Input } from "components/elements/Form";
 import ShareBox from "components/elements/ShareBox";
-import CardWrapper from "components/layouts/CardWrapper";
+import CardWrapper from "components/elements/CardWrapper";
 import Subscribe from "components/blocks/Subscribe";
 
 // styles
@@ -74,7 +74,6 @@ const BlogPage = ({ data, location }) => {
       <StyledRow>
         <Col>
           <Text.H1Title>
-
             Статьи
             <FilterCount>{filteredPosts.length}</FilterCount>
           </Text.H1Title>
@@ -83,7 +82,7 @@ const BlogPage = ({ data, location }) => {
       <StyledRow>
         <Col xl={3} lg={3} md={12} xs={12}>
           <StickyWrapper>
-            <CardWrapper>
+            <CardWrapper boxShadow={theme("colors.highlight")}>
               {tags.map(tag => {
                 const active = currentTags.includes(tag);
 
@@ -95,9 +94,7 @@ const BlogPage = ({ data, location }) => {
                       updateTags(tag);
                     }}
                   >
-
-                    #
-                    {tag}
+                    #{tag}
                   </TagElement>
                 );
               })}
@@ -115,7 +112,6 @@ const BlogPage = ({ data, location }) => {
               onChange={handleChange}
             />
           </SearchWrapper>
-          {console.log(filteredPosts)}
           {filteredPosts.length > 0 ? (
             filteredPosts.map(({ node }) => (
               <Card {...node.frontmatter} key={node.fields.slug} />
@@ -126,7 +122,6 @@ const BlogPage = ({ data, location }) => {
               {`Статьи по запросу ${
                 searchTerm !== "" ? searchTerm : ""
               } не найдены`}
-
               😥
             </Text.H3Title>
           )}

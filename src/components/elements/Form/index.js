@@ -9,7 +9,7 @@ export const Input = styled.input`
   border: 1px solid ${theme("colors.form.border")};
   color: ${theme("colors.text.default")};
   transition: 0.2s;
-  margin: 6px 0;
+  margin-bottom: 6px;
 
   &:focus {
     outline: none;

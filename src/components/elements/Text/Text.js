@@ -16,3 +16,8 @@ export const Title = styled.h4`
   font-size: ${theme("sizes.fonts.mediumValues")};
   color: ${theme("colors.text.title")};
 `;
+
+export const H5Title = styled.h5`
+  font-size: ${theme("sizes.fonts.defaultPlus")};
+  color: ${theme("colors.text.title")};
+`;

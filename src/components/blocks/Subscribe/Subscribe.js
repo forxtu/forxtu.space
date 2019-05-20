@@ -11,7 +11,7 @@ import useSubscribe from "src/hooks/useSubscribe";
 import { Input } from "components/elements/Form";
 import Text from "components/elements/Text";
 import Button from "components/elements/Button";
-import CardWrapper from "components/layouts/CardWrapper";
+import CardWrapper from "components/elements/CardWrapper";
 
 const StyledButton = styled(Button)`
   margin: 12px 0;
@@ -40,17 +40,12 @@ const Subscribe = () => {
             value={user.email}
           />
           <StyledButton inverted type="submit" onClick={submitHandler}>
-
             Подписаться
           </StyledButton>
         </div>
       </form>
       <Text.H5Title>
-
-        Я не буду присылать вам спам. Отписаться можно в
-        <i>любое</i>
-        {" "}
-время
+        Отписаться можно в <i>любое</i> время
       </Text.H5Title>
       <ToastContainer />
     </CardWrapper>
