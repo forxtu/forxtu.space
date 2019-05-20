@@ -16,10 +16,11 @@ const useSubscribe = () => {
       });
       setSubmitResult(result);
       if (result.result === "success") {
-        toast.success("Успех! Спасибо за подписку!");
+        toast.success("🔥 Успех! Спасибо за подписку!");
+        setUser({ name: "", email: "" });
       } else {
         toast.error(
-          "Убедитесь в том что Имя и Email введены правильно. Возможно данный имейл уже подписан.",
+          "😥 Произошла ошибка. Убедитесь в правильности заполнения формы. Возможно данный имейл уже подписан.",
           { toastId: "subscribeToast" }
         );
       }
@@ -27,8 +28,6 @@ const useSubscribe = () => {
       setSubmitResult(err);
       toast.success(submitResult.result.msg);
     }
-
-    setUser({ name: "", email: "" });
   };
 
   const userChangeHandler = e => {
