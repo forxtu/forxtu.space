@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { graphql } from "gatsby";
 import { object } from "prop-types";
+import { Container, Col, Row } from "styled-bootstrap-grid";
 
 // hooks
 import { useTheme } from "src/ThemeContext";
@@ -57,45 +58,53 @@ const BlogPost = ({ data }) => {
     : "https://www.ubackground.com/_ph/85/517668112.jpg";
 
   return (
-    <S.PostWrapper className="post order-2">
-      <Header
-        img={headerImage || defaultPostHeaderImage}
-        title={title}
-        authorName={name}
-        authorImage={iconUrl}
-        subTitle={parseChineseDate(date)}
-      />
-      <Sidebar totalCount={totalCount} posts={edges} post />
-      <S.ContentWrapper xl={7} lg={6} md={12} sm={12} className="order-10">
-        <Content post={html} />
-        <S.SuggestionWrapper>
-          <S.SuggestionTitle>Возможно вам понравится</S.SuggestionTitle>
-          {previous && (
-            <TextLink to={getURL(previous)}>
-              {previous.frontmatter.title}
-            </TextLink>
-          )}
-          <br />
-          {next && (
-            <TextLink to={getURL(next)}>{next.frontmatter.title}</TextLink>
-          )}
-        </S.SuggestionWrapper>
+    <Container fluid>
+      <Row>
+        <Header
+          img={headerImage || defaultPostHeaderImage}
+          title={title}
+          authorName={name}
+          authorImage={iconUrl}
+          subTitle={parseChineseDate(date)}
+        />
+      </Row>
+      <S.PostWrapper className="post">
+        <Col xl={3} lg={3} md={12} sm={12} order={1}>
+          <Sidebar totalCount={totalCount} posts={edges} post />
+        </Col>
+        <S.ContentWrapper xl={6} lg={6} md={12} sm={12} order={2}>
+          <Content post={html} />
+          <S.SuggestionWrapper>
+            <S.SuggestionTitle>Возможно вам понравится</S.SuggestionTitle>
+            {previous && (
+              <TextLink to={getURL(previous)}>
+                {previous.frontmatter.title}
+              </TextLink>
+            )}
+            <br />
+            {next && (
+              <TextLink to={getURL(next)}>{next.frontmatter.title}</TextLink>
+            )}
+          </S.SuggestionWrapper>
 
-        <S.GitalkContainer id="gitalk-container" />
-      </S.ContentWrapper>
-      {tableOfContents && <TableOfContent __html={tableOfContents} />}
+          <S.GitalkContainer id="gitalk-container" />
+        </S.ContentWrapper>
+        <Col xl={3} lg={3} md={12} sm={12} order={3}>
+          {tableOfContents && <TableOfContent __html={tableOfContents} />}
+        </Col>
 
-      <ShareBox url={slug} />
+        <ShareBox url={slug} />
 
-      <SEO
-        title={title}
-        url={slug}
-        siteTitleAlt="FX2 Blog"
-        isPost={false}
-        description={excerpt}
-        image={headerImage || defaultPostHeaderImage}
-      />
-    </S.PostWrapper>
+        <SEO
+          title={title}
+          url={slug}
+          siteTitleAlt="FX2 Blog"
+          isPost={false}
+          description={excerpt}
+          image={headerImage || defaultPostHeaderImage}
+        />
+      </S.PostWrapper>
+    </Container>
   );
 };
 

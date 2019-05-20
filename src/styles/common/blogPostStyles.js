@@ -14,6 +14,7 @@ export const ContentWrapper = styled(Col)`
   box-shadow: 5px 5px 0px 0 ${theme("colors.content.border")};
   border: 1px solid ${theme("colors.card.border")};
   margin-right: auto;
+  margin-bottom: 32px;
   padding: 15px 25px;
 
   h1,
@@ -54,10 +55,6 @@ export const ContentWrapper = styled(Col)`
     margin: 0;
     padding-left: 0.9em;
     padding-right: 0.9em;
-  }
-
-  @media screen and (min-width: 990px) {
-    margin-left: 1.5rem;
   }
 `;
 

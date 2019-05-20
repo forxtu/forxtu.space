@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import { Wrapper, Ul } from "./tableOfContentStyles";
 
 const TableOfContent = ({ __html }) => (
-  <Wrapper lg={2} md={2} className="d-none d-lg-block order-11">
+  <Wrapper>
     <Ul>
       <div dangerouslySetInnerHTML={{ __html }} />
     </Ul>

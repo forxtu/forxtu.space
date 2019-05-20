@@ -1,12 +1,17 @@
 import React from "react";
 import { graphql } from "gatsby";
+import { object } from "prop-types";
 import styled from "styled-components";
-import { Row, Col } from "styled-bootstrap-grid";
+import { Container, Row, Col } from "styled-bootstrap-grid";
 
 // components
 import Card from "components/elements/Card";
 import ShareBox from "components/elements/ShareBox";
 import Sidebar from "components/blocks/Sidebar";
+import Subscribe from "components/blocks/Subscribe";
+
+// styles
+import { StickyWrapper } from "styles/common/utils";
 
 const StyledRow = styled(Row)`
   margin-top: 20px;
@@ -15,21 +20,34 @@ const StyledRow = styled(Row)`
 const Page = ({ data, location }) => {
   const { totalCount, edges } = data.latestPosts;
   return (
-    <StyledRow className="homepage">
-      <div id="header" />
-      <Sidebar totalCount={totalCount} posts={edges} post />
-      <Col xl={6} lg={7} md={12} xs={12} order={2}>
-        {data.content.edges.map(({ node }) => (
-          <Card {...node.frontmatter} key={node.fields.slug} />
-        ))}
-      </Col>
-      <Col xl={2} lg={1} order={3} />
-      <ShareBox url={location.href} hasCommentBox={false} />
-    </StyledRow>
+    <Container>
+      <StyledRow>
+        <div id="header" />
+        <Col xl={3} lg={3} md={12} xs={12}>
+          <Sidebar totalCount={totalCount} posts={edges} post />
+        </Col>
+        <Col xl={6} lg={6} md={12} xs={12}>
+          {data.content.edges.map(({ node }) => (
+            <Card {...node.frontmatter} key={node.fields.slug} />
+          ))}
+        </Col>
+        <ShareBox url={location.href} hasCommentBox={false} />
+        <Col xl={3} lg={3} order={3}>
+          <StickyWrapper>
+            <Subscribe />
+          </StickyWrapper>
+        </Col>
+      </StyledRow>
+    </Container>
   );
 };
 
 export default Page;
+
+Page.propTypes = {
+  data: object.isRequired,
+  location: object.isRequired
+};
 
 export const pageQuery = graphql`
   fragment cardData on MarkdownRemark {

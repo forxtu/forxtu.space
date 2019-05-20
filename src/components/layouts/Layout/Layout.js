@@ -1,7 +1,7 @@
 import React from "react";
+import { object, node } from "prop-types";
 import styled from "styled-components";
 import { theme } from "styled-tools";
-import { Container } from "styled-bootstrap-grid";
 import { ThemeProvider } from "src/ThemeContext";
 
 // styles
@@ -31,12 +31,15 @@ const Layout = ({ children, location }) => (
       <GlobalStyles />
       <Head />
       <Navbar location={location} />
-      <Transition location={location}>
-        <Container fluid>{children}</Container>
-      </Transition>
+      <Transition location={location}>{children}</Transition>
       <Footer />
     </LayoutWrapper>
   </ThemeProvider>
 );
 
 export default Layout;
+
+Layout.propTypes = {
+  children: node.isRequired,
+  location: object.isRequired
+};

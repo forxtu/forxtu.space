@@ -11,9 +11,9 @@ export const StyledHeader = styled.header`
   padding: 0 15px 15px 15px;
   box-shadow: 2px 2px 0px 0 ${theme("colors.sidebar.boxShadow")};
   border: 1px solid ${theme("colors.sidebar.border")};
-  height: 100%;
+  text-align: center;
   @media (max-width: 992px) {
-    margin: 15px;
+    margin: 15px 0;
   }
   margin-left: auto;
 
