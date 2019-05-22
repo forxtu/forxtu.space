@@ -47,7 +47,14 @@ export const ContentWrapper = styled(Col)`
   }
 
   ol {
-    list-style: decimal;
+    list-style: decimal !important;
+  }
+
+  li {
+    margin-bottom: 12px;
+    > p {
+      margin-bottom: 0;
+    }
   }
 
   img {
