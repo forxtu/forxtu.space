@@ -51,9 +51,9 @@ export const ContentWrapper = styled(Col)`
   }
 
   li {
-    margin-bottom: 12px;
+    margin-bottom: 6px;
     > p {
-      margin-bottom: 0;
+      margin-bottom: 6px;
     }
   }
 
@@ -62,6 +62,7 @@ export const ContentWrapper = styled(Col)`
   }
 
   blockquote {
+    margin: 1rem 0;
     max-width: 100%;
     width: 100%;
     word-break: break-word;
