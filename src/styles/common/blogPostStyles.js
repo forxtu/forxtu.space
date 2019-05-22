@@ -47,7 +47,7 @@ export const ContentWrapper = styled(Col)`
   }
 
   ol {
-    list-style: decimal !important;
+    list-style: decimal;
   }
 
   li {
