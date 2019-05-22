@@ -68,7 +68,6 @@ export const ContentWrapper = styled(Col)`
     word-break: break-word;
     caret-color: rgba(255, 255, 255, 0.9);
     border-left: 3px solid ${theme("colors.card.border")};
-    margin: 0;
     padding-left: 0.9em;
     padding-right: 0.9em;
   }
