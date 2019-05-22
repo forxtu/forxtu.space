@@ -42,6 +42,14 @@ export const ContentWrapper = styled(Col)`
     }
   }
 
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
   img {
     width: 100%;
   }
