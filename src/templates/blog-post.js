@@ -74,19 +74,20 @@ const BlogPost = ({ data }) => {
         </Col>
         <S.ContentWrapper xl={6} lg={6} md={12} sm={12} order={2}>
           <Content post={html} />
-          <S.SuggestionWrapper>
-            <S.SuggestionTitle>Возможно вам понравится</S.SuggestionTitle>
-            {previous && (
-              <TextLink to={getURL(previous)}>
-                {previous.frontmatter.title}
-              </TextLink>
-            )}
-            <br />
-            {next && (
-              <TextLink to={getURL(next)}>{next.frontmatter.title}</TextLink>
-            )}
-          </S.SuggestionWrapper>
-
+          {previous || next ? (
+            <S.SuggestionWrapper>
+              <S.SuggestionTitle>Возможно вам понравится</S.SuggestionTitle>
+              {previous && (
+                <TextLink to={getURL(previous)}>
+                  {previous.frontmatter.title}
+                </TextLink>
+              )}
+              <br />
+              {next && (
+                <TextLink to={getURL(next)}>{next.frontmatter.title}</TextLink>
+              )}
+            </S.SuggestionWrapper>
+          ) : null}
           <S.GitalkContainer id="gitalk-container" />
         </S.ContentWrapper>
         <Col xl={3} lg={3} md={12} sm={12} order={3}>
