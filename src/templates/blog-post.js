@@ -130,7 +130,6 @@ export const pageQuery = graphql`
     content: allMarkdownRemark(
       sort: { order: DESC, fields: frontmatter___date }
       skip: $index
-      limit: 1
     ) {
       edges {
         node {
