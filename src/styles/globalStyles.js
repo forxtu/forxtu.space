@@ -19,6 +19,14 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: inherit;
   }
 
+  ::selection {
+    background: #baffd9;
+  }
+  ::-moz-selection {
+    background: #baffd9;
+  }
+
+
   h1,h2,h3,h4,h5,h6 {
     font-family: "Didact Gothic",sans-serif !important;
     font-weight: 600 !important;
