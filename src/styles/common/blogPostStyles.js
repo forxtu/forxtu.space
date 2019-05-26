@@ -86,6 +86,13 @@ export const ContentWrapper = styled(Col)`
     em {
       background-color: ${theme("colors.content.em.bg")};
       color: ${theme("colors.content.em.text")};
+
+      &:before {
+        content: "❗️";
+        float: left;
+        padding-right: 6px;
+        font-style: normal;
+      }
     }
   }
 `;
