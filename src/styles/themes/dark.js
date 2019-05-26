@@ -9,9 +9,10 @@ dark.palette = {
   salmon: "#ff6f6f",
   ivory: "#FFFFF2",
   sunny: "#eaeac4",
+  veryLightRed: "#f7c5b2",
   lightSunny: "#f9f9aa",
   darkSeaGreen: "#24ada3",
-  powderBlue: "#AEE5D8",
+  powderGreen: "#AEE5D8",
   white: "#fff",
   black: "#000",
   darkGrey: "#333",
@@ -34,6 +35,7 @@ const {
     sunny,
     lightSunny,
     ivory,
+    veryLightRed,
     blackOpacity,
     themeColors
   }
@@ -100,6 +102,10 @@ dark.colors = {
         bg: themeColors.itemBg,
         border: darkGrey
       }
+    },
+    em: {
+      bg: themeColors.itemBg,
+      text: veryLightRed
     }
   },
   shareBox: {

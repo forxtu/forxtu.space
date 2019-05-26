@@ -9,7 +9,8 @@ light.palette = {
   salmon: "#ff6f6f",
   ivory: "#FFFFF2",
   lightSeaGreen: "#24ada3",
-  powderBlue: "#AEE5D8",
+  powderGreen: "#AEE5D8",
+  veryLightGreen: "#dbfff0",
   veryLightGrey: "#f9f9fa",
   white: "#fff",
   black: "#000",
@@ -23,7 +24,8 @@ light.palette = {
 const {
   palette: {
     lightSeaGreen,
-    powderBlue,
+    powderGreen,
+    veryLightGreen,
     veryLightGrey,
     grey,
     darkGrey,
@@ -87,7 +89,7 @@ light.colors = {
     }
   },
   content: {
-    border: powderBlue,
+    border: powderGreen,
     gitalk: {
       commentBg: veryLightGrey,
       commentHoverShadow: salmon,
@@ -98,6 +100,10 @@ light.colors = {
         bg: white,
         border: lightGrey
       }
+    },
+    em: {
+      bg: veryLightGreen,
+      text: darkGrey
     }
   },
   shareBox: {

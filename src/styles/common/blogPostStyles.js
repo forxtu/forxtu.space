@@ -62,14 +62,31 @@ export const ContentWrapper = styled(Col)`
   }
 
   blockquote {
+    &:before {
+      content: "📌";
+      float: left;
+      padding-right: 6px;
+    }
     margin: 1rem 0;
     max-width: 100%;
     width: 100%;
     word-break: break-word;
     caret-color: rgba(255, 255, 255, 0.9);
-    border-left: 3px solid ${theme("colors.card.border")};
-    padding-left: 0.9em;
-    padding-right: 0.9em;
+    border-left: 3px solid #ff6f6f;
+    background-color: #ffffd1;
+    padding: 12px;
+
+    p {
+      color: #333;
+      margin: 0;
+    }
+  }
+
+  p {
+    em {
+      background-color: ${theme("colors.content.em.bg")};
+      color: ${theme("colors.content.em.text")};
+    }
   }
 `;
 
