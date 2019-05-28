@@ -33,6 +33,14 @@ export const ContentWrapper = styled(Col)`
   h2 {
     font-weight: 600;
     margin-bottom: 25px;
+    margin-top: 40px;
+    border-bottom: 2px solid ${theme("colors.border")};
+    padding-bottom: 6px;
+  }
+
+  h3 {
+    margin: 32px 0 16px 0;
+    font-weight: 400 !important;
   }
 
   a {
@@ -83,9 +91,10 @@ export const ContentWrapper = styled(Col)`
   }
 
   p {
-    em {
+    > em {
       background-color: ${theme("colors.content.em.bg")};
       color: ${theme("colors.content.em.text")};
+      font-style: normal;
 
       &:before {
         content: "❗️";
