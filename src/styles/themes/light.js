@@ -12,6 +12,7 @@ light.palette = {
   powderGreen: "#AEE5D8",
   veryLightGreen: "#dbfff0",
   steelBlue: "#2492c9",
+  darkBlue: "#000d72",
   veryLightGrey: "#f9f9fa",
   white: "#fff",
   black: "#000",
@@ -27,7 +28,7 @@ const {
     lightSeaGreen,
     powderGreen,
     veryLightGreen,
-    steelBlue,
+    darkBlue,
     veryLightGrey,
     grey,
     darkGrey,
@@ -105,7 +106,7 @@ light.colors = {
     },
     em: {
       bg: veryLightGreen,
-      text: steelBlue
+      text: darkBlue
     }
   },
   shareBox: {
