@@ -28,15 +28,15 @@ _JavaScript входит в топ самых популярных и востр
 
 ### Русскоязычные
 
-* <a href="https://learn.javascript.ru" target="_blank">learn.javascript</a> - невероятно полезный учебник по языку JS - Обязателен к прочтению
-* <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference" target="_blank">Mozilla</a> - учебник, справочник и пошаговые уроки. Доступен и на русском, и на английском, и еще на большом количестве языков - Обращайтесь к справочнику, когда хотите понять, как конкретный метод работает
+* <a href="https://learn.javascript.ru" target="_blank">learn.javascript</a> - невероятно полезный учебник по языку JS - _Обязателен к прочтению_
+* <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference" target="_blank">Mozilla</a> - учебник, справочник и пошаговые уроки. Доступен и на русском, и на английском, и еще на большом количестве языков - _Обращайтесь к справочнику, когда хотите понять, как конкретный метод работает_
 * <a href="http://javascript.ru/manual" target="_blank">Javascript.ru</a> - справочник по JS
 
 ### Англоязычные
 
 * <a href="https://learn.freecodecamp.org" target="_blank">Free code camp</a> - интерактивная платформа с теорией и практикой
 * <a href="https://www.codecademy.com/learn/introduction-to-javascript" target="_blank">Codeacademy</a> - интерактивная платформа для новичков
-* <a href="https://www.w3schools.com/js/default.asp" target="_blank">w3 school</a> - пошаговый учебник учебник
+* <a href="https://www.w3schools.com/js/default.asp" target="_blank">w3 school</a> - пошаговый учебник
 
 ### Бонус
 
