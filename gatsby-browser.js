@@ -5,14 +5,13 @@ import { config } from "./data";
 import installFontAwesome from "api/installFontAwesome";
 
 // styles
-import "styles/prism-duotone-sea.css";
+import "styles/prism-atom-dark.css";
 
 const { url, gaTrackId, gaOptimizeId, transitionDelay = 100 } = config;
 
 installFontAwesome();
 
-const isLocalDevelopment = () =>
-  window && window.location && window.location.origin !== url;
+const isLocalDevelopment = () => window && window.location && window.location.origin !== url;
 
 if (isLocalDevelopment() === false) {
   ReactGA.initialize(gaTrackId);
@@ -38,8 +37,8 @@ export const shouldUpdateScroll = ({
   routerProps: { location }
 }) => {
   if (
-    prevRouterProps &&
-    prevRouterProps.location.pathname === location.pathname
+    prevRouterProps
+    && prevRouterProps.location.pathname === location.pathname
   ) {
     if (window) {
       const SmoothScroll = require("smooth-scroll");
