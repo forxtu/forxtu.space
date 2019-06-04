@@ -57,17 +57,6 @@ templateKey: blog-post
 </form>
 ```
 
-Абстрактный пример
-
-```scss
-.block {
-}
-.block__element {
-}
-.block--modifier {
-}
-```
-
 Пример стилизации в сочитании с использованием вложенности селекторов SCSS
 
 ```scss
@@ -113,36 +102,36 @@ _Я использую **методологию BEM** в сочетании с *
 
 ### Препроцессоры
 
-#### Русскоязычные
+##### Русскоязычные
 
 * <a href="https://sass-scss.ru/guide/" target="_blank">SASS/SCSS</a> - основы
 * <a href="https://sass-scss.ru/documentation/" target="_blank">SASS/SCSS</a> - документация
 
-#### Англоязычные
+##### Англоязычные
 
 * <a href="https://sass-lang.com/guide" target="_blank">SASS/SCSS</a> - официальная документация
 * <a href="http://lesscss.org/features/" target="_blank">LESS</a> - официальная документация
 
 ### Фреймворки
 
-#### Русскоязычные
+##### Русскоязычные
 
 * <a href="https://medium.com/@stasonmars/узнаем-bootstrap-4-за-30-минут-создавая-лендинг-d268d52d6c84" target="_blank">Статья по основам Bootstrap</a>
 
-#### Англоязычные
+##### Англоязычные
 
 * <a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/" target="_blank">Bootstrap</a> - официальная документация
 * <a href="https://bulma.io/documentation/" target="_blank">Bulma</a> - официальная документация
 
 ### Архитектура
 
-#### Русскоязычные
+##### Русскоязычные
 
 * <a href="https://ru.bem.info" target="_blank">BEM оффициальный сайт</a>
 * <a href="https://ru.bem.info/methodology/key-concepts/ " target="_blank">Руководство к действию</a>
 * <a href="https://habr.com/ru/post/203440/" target="_blank">Неплохая статья на хабре</a>
 
-#### Англоязычные
+##### Англоязычные
 
 * <a href="https://en.bem.info/methodology/" target="_blank">BEM оффициальный сайт</a> также поддерживает английский язык
 * <a href="http://getbem.com/introduction/" target="_blank">GetBem</a>
