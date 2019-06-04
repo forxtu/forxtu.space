@@ -5,7 +5,7 @@ import { config } from "./data";
 import installFontAwesome from "api/installFontAwesome";
 
 // styles
-import "styles/prism-atom-dark.css";
+import "styles/prism-xonokai.css";
 
 const { url, gaTrackId, gaOptimizeId, transitionDelay = 100 } = config;
 
