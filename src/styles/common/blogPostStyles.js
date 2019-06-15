@@ -6,6 +6,9 @@ export const PostWrapper = styled(Row)`
   @media screen and (max-width: 990px) {
     padding: 5px 25px;
   }
+  @media screen and (max-width: 480px) {
+    padding: 5px 0;
+  }
   border-radius: 2px;
 `;
 

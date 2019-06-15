@@ -26,12 +26,6 @@ const StyledContainer = styled(Container)`
 
 const StyledRow = styled(Row)`
   margin-top: 20px;
-
-  @media screen and (max-width: 480px) {
-    div {
-      padding: 0;
-    }
-  }
 `;
 
 const SearchWrapper = styled.div`

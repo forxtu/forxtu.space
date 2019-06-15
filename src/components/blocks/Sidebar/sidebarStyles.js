@@ -15,6 +15,9 @@ export const StyledHeader = styled.header`
   @media (max-width: 992px) {
     margin: 15px 0;
   }
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
   margin-left: auto;
 
   ${About} {
