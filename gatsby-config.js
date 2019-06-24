@@ -18,6 +18,7 @@ module.exports = {
     author: "Dennis FORXTU Merkulov"
   },
   plugins: [
+    "gatsby-plugin-feed",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-styled-components",
     "gatsby-plugin-sass",
