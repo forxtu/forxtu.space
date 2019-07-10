@@ -21,7 +21,7 @@ templateKey: blog-post
 
 ### Так на свет родилась “FORXTU Theme”.
 
-![forxtu theme](/assets/forxtu-theme.png "forxtu theme")
+<a href="https://github.com/forxtu/forxtu-vscode-theme" target="_blank">![forxtu theme](/assets/forxtu-theme.png "forxtu theme")</a>
 
 ### Чтобы установить данную тему в свой редактор:
 
