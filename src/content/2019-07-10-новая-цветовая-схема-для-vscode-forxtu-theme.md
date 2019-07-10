@@ -21,7 +21,7 @@ templateKey: blog-post
 
 ### Так на свет родилась “FORXTU Theme”.
 
-![forxtu theme](/assets/forxtu-dark-frameworks.png "forxtu theme")
+![forxtu theme](/assets/forxtu-theme.png "forxtu theme")
 
 ### Чтобы установить данную тему в свой редактор:
 
