@@ -14,7 +14,7 @@ export const PostWrapper = styled(Row)`
 
 export const ContentWrapper = styled(Col)`
   background: ${theme("colors.card.bg")};
-  box-shadow: 5px 5px 0px 0 ${theme("colors.content.border")};
+  box-shadow: 2px 2px 0px 0 ${theme("colors.content.border")};
   border: 1px solid ${theme("colors.card.border")};
   margin-right: auto;
   margin-bottom: 32px;

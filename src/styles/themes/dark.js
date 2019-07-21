@@ -19,8 +19,8 @@ dark.palette = {
   grey: "#aeaeae",
   lightGrey: "#d1d1d1",
   themeColors: {
-    layoutBg: "#282828",
-    itemBg: "#1f1f1f"
+    itemBg: "#282828",
+    layoutBg: "#1f1f1f"
   },
   blackOpacity: "rgba(0, 0, 0, 0.6);"
 };
@@ -51,7 +51,7 @@ dark.colors = {
   },
   highlight: lightSunny,
   header: {
-    bg: themeColors.itemBg,
+    bg: themeColors.layoutBg,
     navItem: ivory,
     logo: {
       bg: white,

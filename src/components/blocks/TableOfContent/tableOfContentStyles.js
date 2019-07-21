@@ -10,10 +10,11 @@ export const Wrapper = styled(Col)`
   position: sticky;
   top: 70px;
   ${Ul} {
-    box-shadow: 5px 5px 0px 0 ${theme("colors.card.boxShadow")};
+    box-shadow: 2px 2px 0px 0 ${theme("colors.card.boxShadow")};
     transition: 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
     border: 1px solid ${theme("colors.card.border")};
     padding: 15px;
+    background: ${theme("colors.card.bg")};
     ul {
       padding-left: 8px;
       li {
