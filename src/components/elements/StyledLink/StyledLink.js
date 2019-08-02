@@ -1,8 +1,11 @@
-import React from "react";
-import { string } from "prop-types";
+import React, { useContext } from "react";
+import { string, node } from "prop-types";
 import styled from "styled-components";
 import { theme } from "styled-tools";
 import { Link } from "gatsby";
+
+// utils
+import { LanguageContext } from "components/layouts/Layout";
 
 const StyledLinkWrapper = styled(Link)`
   color: ${theme("colors.header.navItem")};
@@ -23,15 +26,20 @@ const StyledLinkWrapper = styled(Link)`
   }
 `;
 
-const StyledLink = ({ to, href, children }) => (
-  <StyledLinkWrapper href={href} to={to}>
-    {children}
-  </StyledLinkWrapper>
-);
+const StyledLink = ({ to, href, children }) => {
+  const { language } = useContext(LanguageContext);
+
+  return (
+    <StyledLinkWrapper href={href} to={language === "ru" ? to : `en/${to}`}>
+      {children}
+    </StyledLinkWrapper>
+  );
+};
 
 StyledLink.propTypes = {
   href: string.isRequired,
-  to: string.isRequired
+  to: string.isRequired,
+  children: node.isRequired
 };
 
 export default StyledLink;

@@ -25,6 +25,15 @@ module.exports = {
     "gatsby-plugin-catch-links",
     "gatsby-plugin-webpack-bundle-analyzer",
     {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        path: `${__dirname}/src/intl`,
+        languages: [`ru`, `en`],
+        defaultLanguage: `ru`,
+        redirect: false
+      }
+    },
+    {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         resolveEnv: () => NETLIFY_ENV,

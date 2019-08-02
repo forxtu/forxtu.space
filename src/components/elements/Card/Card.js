@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import { string, arrayOf } from "prop-types";
 
 // styles
@@ -19,11 +18,12 @@ import {
 // components
 import Tag from "components/elements/Tag";
 import StyledLink from "components/elements/StyledLink";
+import TextLink from "components/elements/TextLink";
 
 const CardHeader = ({ url, image, backgroundColor }) => (
-  <Link to={url} href={url}>
+  <StyledLink to={url} href={url}>
     <Wrapper headerImage={image} color={backgroundColor} />
-  </Link>
+  </StyledLink>
 );
 
 const Card = ({
@@ -52,9 +52,11 @@ const Card = ({
               <Tag name={name} key={name} />
             ))}
           </Stats>
-          <StyledTitle to={`${url}/`} href={`${url}/`}>
-            <Title>{title}</Title>
-          </StyledTitle>
+          <TextLink to={`${url}/`} href={`${url}/`} underline={false}>
+            <StyledTitle>
+              <Title>{title}</Title>
+            </StyledTitle>
+          </TextLink>
           <Description>{description}</Description>
           <StyledLink to={`${url}/`} href={`${url}/`}>
             Читать далее

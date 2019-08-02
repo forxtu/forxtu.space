@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "styled-tools";
 import { ToastContainer } from "react-toastify";
+import { FormattedMessage, injectIntl } from "gatsby-plugin-intl";
+
 import "react-toastify/dist/ReactToastify.css";
 
 // hooks
@@ -52,4 +54,4 @@ const Subscribe = () => {
   );
 };
 
-export default Subscribe;
+export default injectIntl(Subscribe);

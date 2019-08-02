@@ -1,0 +1,17 @@
+{
+  "sidebar.write_me": "Write me!",
+  "sidebar.number_of_articles": "Всего статей",
+  "sidebar.last_articles": "Last articles",
+  "sidebar.key_links": "Key links",
+
+  "blog.title": "Articles",
+  "blog_search_placeholder": "Type article title...",
+
+  "subscribe.title": "Subscribe to get my latest content by email!",
+  "subscribe.input_name": "Name",
+  "subscribe.input_email": "Email",
+  "subscribe.button": "Subscribe",
+  "subscribe.description": "Unsubscribe at any time.",
+
+  "tags.title": "Tags"
+}

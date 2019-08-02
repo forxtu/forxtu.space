@@ -3,7 +3,10 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { theme } from "styled-tools";
 
-const StyledTag = styled.a`
+// components
+import TextLink from "components/elements/TextLink";
+
+const StyledTag = styled.span`
   color: ${theme("colors.text.default")};
   padding: 0 6px;
 
@@ -13,19 +16,16 @@ const StyledTag = styled.a`
 `;
 
 const Tag = ({ name, count }) => (
-  <StyledTag href={`/tag/${name.toLowerCase()}/`}>
-
-    #
-    {name}
-    {count > 0 && (
-    <span>
-      {" "}
-- (
-      {count}
-)
-    </span>
-    )}
-  </StyledTag>
+  <TextLink
+    color="default"
+    to={`/tag/${name.toLowerCase()}/`}
+    href={`/tag/${name.toLowerCase()}/`}
+  >
+    <StyledTag>
+      #{name}
+      {count > 0 && <span> - ({count})</span>}
+    </StyledTag>
+  </TextLink>
 );
 
 Tag.propTypes = {

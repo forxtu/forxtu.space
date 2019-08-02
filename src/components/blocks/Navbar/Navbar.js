@@ -14,6 +14,7 @@ import * as S from "./navbarStyles";
 // components
 import GithubCorner from "components/elements/GithubCorner";
 import ThemeToggler from "components/elements/ThemeToggler";
+import LanguageToggler from "components/elements/LanguageToggler";
 import NavItem from "components/blocks/Navbar/NavItem";
 
 const { navbarList = [] } = config;
@@ -65,6 +66,7 @@ const Navbar = () => (
           </S.CollapsedMenuUl>
         </S.CollapsedMenuWrapper>
         <ThemeToggler />
+        <LanguageToggler />
       </S.MenuWrapper>
     </Container>
   </S.NavbarWrapper>
