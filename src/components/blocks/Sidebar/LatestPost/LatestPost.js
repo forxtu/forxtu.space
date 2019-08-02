@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { FormattedMessage } from "gatsby-plugin-intl";
 
 // components
 import Text from "components/elements/Text";
@@ -16,7 +17,12 @@ const toLower = urlVal => urlVal && `${urlVal.toLowerCase()}/`;
 
 const LatestPost = ({ posts }) => (
   <Wrapper>
-    <Text.Title>Последние статьи</Text.Title>
+    <Text.Title>
+      <FormattedMessage
+        defaultMessage="Последние статьи"
+        id="sidebar.last_articles"
+      />
+    </Text.Title>
     {posts.map(
       ({
         node: {

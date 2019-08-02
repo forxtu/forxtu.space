@@ -2,7 +2,9 @@ import React from "react";
 import { graphql } from "gatsby";
 import { object } from "prop-types";
 import styled from "styled-components";
+import { theme } from "styled-tools";
 import { Container, Row, Col } from "styled-bootstrap-grid";
+import { FormattedMessage } from "gatsby-plugin-intl";
 
 // hooks
 import useGetTags from "src/hooks/useGetTags";
@@ -23,6 +25,12 @@ const StyledRow = styled(Row)`
   margin-left: 15px;
 `;
 
+const FilterCount = styled.span`
+  padding: 10px 20px !important;
+  color: ${theme("colors.highlight")};
+  font-weight: 700;
+`;
+
 const TagPage = ({ data }) => {
   const { tags, mapping } = useGetTags(data.allMarkdownRemark);
 
@@ -31,9 +39,8 @@ const TagPage = ({ data }) => {
       <Row>
         <Col>
           <PageTitle>
-
-            Всего тегов:
-            <b>{tags.length}</b>
+            <FormattedMessage defaultMessage="Всего тегов" id="tags.title" />
+            <FilterCount>{tags.length}</FilterCount>
           </PageTitle>
         </Col>
       </Row>

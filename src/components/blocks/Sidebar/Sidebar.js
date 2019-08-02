@@ -1,5 +1,6 @@
 import React from "react";
 import { number, array } from "prop-types";
+import { FormattedMessage } from "gatsby-plugin-intl";
 
 // utils
 import { config } from "../../../../data";
@@ -11,7 +12,7 @@ import * as s from "./sidebarStyles";
 // components
 import Information from "./Information";
 
-const { wordings = [], email, about } = config;
+const { email, about } = config;
 
 const Sidebar = ({ totalCount, posts }) => (
   <s.StyledHeader>
@@ -20,8 +21,12 @@ const Sidebar = ({ totalCount, posts }) => (
         {/* <s.Avatar src={iconUrl} alt="Forxtu" /> */}
         <s.AvatarBlock>FX2</s.AvatarBlock>
       </s.StyledLink>
-      <s.Description className="mb-1">{wordings[0]}</s.Description>
-      <s.Description className="mb-3">{wordings[1]}</s.Description>
+      <s.Description className="mb-1">
+        <FormattedMessage
+          defaultMessage="Задайте свой вопрос!"
+          id="sidebar.write_me"
+        />
+      </s.Description>
       <IconLink
         target="_blank"
         href={`mailto:${email}`}
