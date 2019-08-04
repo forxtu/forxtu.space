@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { string, node } from "prop-types";
+import { string, node, boolean } from "prop-types";
 import styled, { css } from "styled-components";
 import { theme, switchProp } from "styled-tools";
 import { Link } from "gatsby";
@@ -43,7 +43,7 @@ TextLink.propTypes = {
   href: string.isRequired,
   to: string.isRequired,
   children: node.isRequired,
-  underline: string,
+  underline: boolean,
   color: string
 };
 

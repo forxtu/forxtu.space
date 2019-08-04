@@ -50,19 +50,23 @@
   "navbarList": [
     {
       "href": "/blog/",
-      "title": "Все статьи"
+      "title": "Все статьи",
+      "id": "navbar.blog"
     },
     {
       "href": "/tags/",
-      "title": "Теги"
+      "title": "Теги",
+      "id": "navbar.tags"
     },
     {
       "href": "/guestbook/",
-      "title": "Дневник гостей"
+      "title": "Дневник гостей",
+      "id": "navbar.guestbook"
     },
     {
       "href": "/about/",
-      "title": "О проекте"
+      "title": "О проекте",
+      "id": "navbar.about"
     }
   ],
   "redirectors": [

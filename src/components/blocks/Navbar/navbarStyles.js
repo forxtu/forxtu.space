@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { theme } from "styled-tools";
 
-export const NavbarBrand = styled.button``;
+export const NavbarBrand = styled.div``;
 export const BrandLogo = styled.span``;
 export const NavbarWrapper = styled.nav`
   border-bottom: 1px solid rgba(0, 0, 0, 0.33);

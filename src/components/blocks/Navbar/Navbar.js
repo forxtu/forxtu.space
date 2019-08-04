@@ -1,12 +1,11 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
 import ReactGA from "react-ga";
 import { Container } from "styled-bootstrap-grid";
+import { defineMessages } from "gatsby-plugin-intl";
 
 // utils
 import { gotoPage } from "api/url";
-import { config } from "../../../../data";
+// import { config } from "../../../../data";
 
 // styles
 import * as S from "./navbarStyles";
@@ -17,59 +16,93 @@ import ThemeToggler from "components/elements/ThemeToggler";
 import LanguageToggler from "components/elements/LanguageToggler";
 import NavItem from "components/blocks/Navbar/NavItem";
 
-const { navbarList = [] } = config;
+// const { navbarList = [] } = config;
 
 const NavbarClass = ["navbar", "navbar-expand-md", "sticky-top"];
 
-const Navbar = () => (
-  <S.NavbarWrapper
-    id="m-navbar"
-    className={`${NavbarClass.join(" ")} navbar-night`}
-  >
-    <Container className="container">
-      <S.NavbarBrand
-        type="button"
-        className="btn btn-default"
-        onClick={() => {
-          ReactGA.event({
-            category: "User",
-            action: "Click navbar logo"
-          });
-          gotoPage("/");
-        }}
-      >
-        <S.BrandLogo className="brand-logo">FORXTU</S.BrandLogo>
-      </S.NavbarBrand>
-      <GithubCorner url="https://github.com/forxtu/forxtu.space" />
-      <S.MenuWrapper>
-        <S.NavbarToggler
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
+const Navbar = ({ language }) => {
+  const navbarList = [
+    defineMessages({
+      formattedTitle: {
+        id: "navbar.blog",
+        defaultMessage: "Все статьи"
+      },
+      href: "/blog/"
+    }),
+    defineMessages({
+      formattedTitle: {
+        id: "navbar.tags",
+        defaultMessage: "Теги"
+      },
+      href: "/tags/"
+    }),
+    defineMessages({
+      formattedTitle: {
+        id: "navbar.guestbook",
+        defaultMessage: "Дневник гостей"
+      },
+      href: "/guestbook/"
+    }),
+    defineMessages({
+      formattedTitle: {
+        id: "navbar.about",
+        defaultMessage: "О проекте"
+      },
+      href: "/about/"
+    })
+  ];
+
+  return (
+    <S.NavbarWrapper
+      id="m-navbar"
+      className={`${NavbarClass.join(" ")} navbar-night`}
+    >
+      <Container className="container">
+        <S.NavbarBrand
+          className="btn btn-default"
+          onClick={() => {
+            ReactGA.event({
+              category: "User",
+              action: "Click navbar logo"
+            });
+            gotoPage(`${language === "ru" ? "/" : "/en/"}`);
+          }}
         >
-          <FontAwesomeIcon icon={faBars} />
-        </S.NavbarToggler>
-        <S.CollapsedMenuWrapper
-          className="collapse navbar-collapse flex-row-reverse"
-          id="navbarSupportedContent"
-        >
-          <S.CollapsedMenuUl className="navbar-nav mr-2">
-            {navbarList.map(item => (
-              <NavItem
-                url={item.href}
-                name={item.title}
-                list={item.list}
-                key={item.href}
-              />
-            ))}
-          </S.CollapsedMenuUl>
-        </S.CollapsedMenuWrapper>
-        <ThemeToggler />
-        <LanguageToggler />
-      </S.MenuWrapper>
-    </Container>
-  </S.NavbarWrapper>
-);
+          <S.BrandLogo className="brand-logo">FORXTU</S.BrandLogo>
+        </S.NavbarBrand>
+        <GithubCorner url="https://github.com/forxtu/forxtu.space" />
+        <S.MenuWrapper>
+          <S.NavbarToggler
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+          >
+            <span role="img" aria-label="burger menu">
+              🍔
+            </span>
+          </S.NavbarToggler>
+          <S.CollapsedMenuWrapper
+            className="collapse navbar-collapse flex-row-reverse"
+            id="navbarSupportedContent"
+          >
+            <S.CollapsedMenuUl className="navbar-nav mr-2">
+              {navbarList.map(item => (
+                <NavItem
+                  url={item.href}
+                  name={item.formattedTitle}
+                  list={item.list}
+                  key={item.href}
+                />
+              ))}
+            </S.CollapsedMenuUl>
+          </S.CollapsedMenuWrapper>
+          <ThemeToggler />
+          <LanguageToggler />
+        </S.MenuWrapper>
+      </Container>
+    </S.NavbarWrapper>
+  );
+};
 
 export default Navbar;

@@ -1,11 +1,18 @@
 {
+  "navbar.blog": "All articles",
+  "navbar.tags": "Tags",
+  "navbar.guestbook": "Guestbook",
+  "navbar.about": "About",
+
   "sidebar.write_me": "Write me!",
-  "sidebar.number_of_articles": "Всего статей",
+  "sidebar.number_of_articles": "Articles",
   "sidebar.last_articles": "Last articles",
   "sidebar.key_links": "Key links",
 
   "blog.title": "Articles",
   "blog_search_placeholder": "Type article title...",
+  "blog.read_more": "Read more",
+  "blog.search_result": "Articles not found",
 
   "subscribe.title": "Subscribe to get my latest content by email!",
   "subscribe.input_name": "Name",

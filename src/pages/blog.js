@@ -53,6 +53,10 @@ const TagElement = styled.div`
   )};
 `;
 
+const SearchResult = styled.span`
+  color: ${theme("colors.highlight")};
+`;
+
 const BlogPage = ({ data, location, intl }) => {
   const {
     searchTerm,
@@ -117,9 +121,12 @@ const BlogPage = ({ data, location, intl }) => {
           ) : (
             <Text.H3Title>
               <br />
-              {`Статьи по запросу ${
-                searchTerm !== "" ? searchTerm : ""
-              } не найдены`}
+              <FormattedMessage
+                defaultMessage="Статьи по запросу не найдены"
+                id="blog.search_result"
+              />
+              {": "}
+              <SearchResult>{searchTerm !== "" ? searchTerm : ""}</SearchResult>
               😥
             </Text.H3Title>
           )}

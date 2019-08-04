@@ -3,6 +3,7 @@ import { object, node, array, string } from "prop-types";
 import styled from "styled-components";
 import { theme } from "styled-tools";
 import { ThemeProvider } from "src/ThemeContext";
+import { IntlProvider } from "gatsby-plugin-intl";
 
 // styles
 import GlobalStyles from "styles/globalStyles";
@@ -39,7 +40,13 @@ const Layout = ({
       <LayoutWrapper className="layout">
         <GlobalStyles />
         <Head />
-        <Navbar location={location} language={language} languages={languages} />
+        <IntlProvider locale={language}>
+          <Navbar
+            location={location}
+            language={language}
+            languages={languages}
+          />
+        </IntlProvider>
         <Transition location={location}>{children}</Transition>
         <Footer />
       </LayoutWrapper>

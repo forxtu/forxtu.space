@@ -1,6 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
+import { string, arrayOf, shape } from "prop-types";
 import ReactGA from "react-ga";
+import { FormattedMessage } from "gatsby-plugin-intl";
 
 // utils
 import { gotoPage } from "api/url";
@@ -18,12 +19,12 @@ const NavItem = ({ url, name, list }) => {
         onClick={() => {
           ReactGA.event({
             category: "User",
-            action: `Click nav-menu: ${name}`
+            action: `Click nav-menu: ${name.defaultMessage}`
           });
           gotoPage(url);
         }}
       >
-        {name}
+        <FormattedMessage {...name} />
       </StyledLink>
     );
   }
@@ -32,12 +33,13 @@ const NavItem = ({ url, name, list }) => {
 };
 
 NavItem.propTypes = {
-  url: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  list: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string,
-      href: PropTypes.string
+  url: string.isRequired,
+  name: string.isRequired,
+  id: string.isRequired,
+  list: arrayOf(
+    shape({
+      title: string,
+      href: string
     })
   )
 };

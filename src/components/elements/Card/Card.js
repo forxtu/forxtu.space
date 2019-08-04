@@ -1,5 +1,6 @@
 import React from "react";
 import { string, arrayOf } from "prop-types";
+import { FormattedMessage } from "gatsby-plugin-intl";
 
 // styles
 import {
@@ -59,7 +60,10 @@ const Card = ({
           </TextLink>
           <Description>{description}</Description>
           <StyledLink to={`${url}/`} href={`${url}/`}>
-            Читать далее
+            <FormattedMessage
+              defaultMessage="Читать далее"
+              id="blog.read_more"
+            />
           </StyledLink>
         </Content>
       </Data>
