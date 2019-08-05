@@ -20,5 +20,6 @@
   "subscribe.button": "Subscribe",
   "subscribe.description": "Unsubscribe at any time.",
 
-  "tags.title": "Tags"
+  "tags.title": "Tags",
+  "tags.single_tag_title": "Articles with tag"
 }

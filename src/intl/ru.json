@@ -20,5 +20,6 @@
   "subscribe.button": "Подписаться",
   "subscribe.description": "Отписаться можно в любое время",
 
-  "tags.title": "Всего тегов"
+  "tags.title": "Всего тегов",
+  "tags.single_tag_title": "Статей с тегом"
 }
