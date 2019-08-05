@@ -22,7 +22,7 @@ const StyledContainer = styled(Container)`
 `;
 
 const StyledRow = styled(Row)`
-  margin-left: 15px;
+  margin-left: 0;
 `;
 
 const FilterCount = styled.span`
