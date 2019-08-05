@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { graphql } from "gatsby";
 import { object } from "prop-types";
 import { Container, Col, Row } from "styled-bootstrap-grid";
+import { FormattedMessage } from "gatsby-plugin-intl";
 
 // hooks
 import { useTheme } from "src/ThemeContext";
@@ -76,7 +77,12 @@ const BlogPost = ({ data }) => {
           <Content post={html} />
           {previous || next ? (
             <S.SuggestionWrapper>
-              <S.SuggestionTitle>Возможно вам понравится</S.SuggestionTitle>
+              <S.SuggestionTitle>
+                <FormattedMessage
+                  defaultMessage="Возможно вам понравится"
+                  id="blog.suggestion"
+                />
+              </S.SuggestionTitle>
               {previous && (
                 <TextLink to={getURL(previous)}>
                   {previous.frontmatter.title}

@@ -5,6 +5,9 @@ import { FormattedMessage } from "gatsby-plugin-intl";
 // utils
 import { config } from "../../../../data";
 
+// components
+import StyledLink from "components/elements/StyledLink";
+
 // styles
 import IconLink from "components/elements/IconLink";
 import * as s from "./sidebarStyles";
@@ -12,15 +15,15 @@ import * as s from "./sidebarStyles";
 // components
 import Information from "./Information";
 
-const { email, about } = config;
+const { email } = config;
 
 const Sidebar = ({ totalCount, posts }) => (
   <s.StyledHeader>
     <s.About className="about-me">
-      <s.StyledLink to={about} href={about}>
+      <StyledLink to="/about/" href="/about/">
         {/* <s.Avatar src={iconUrl} alt="Forxtu" /> */}
         <s.AvatarBlock>FX2</s.AvatarBlock>
-      </s.StyledLink>
+      </StyledLink>
       <s.Description className="mb-1">
         <FormattedMessage
           defaultMessage="Задайте свой вопрос!"

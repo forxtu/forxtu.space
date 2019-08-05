@@ -15,6 +15,7 @@ import SEO from "components/helpers/SEO";
 
 const StyledTag = styled.span`
   color: ${theme("colors.highlight")};
+  padding: 0 20px;
 `;
 
 const TagPage = ({ data, pageContext }) => {
@@ -29,8 +30,8 @@ const TagPage = ({ data, pageContext }) => {
             <FormattedMessage
               defaultMessage="Статей с тегом"
               id="tags.single_tag_title"
-            />{" "}
-            <StyledTag>#{tag}</StyledTag>: {edges.length}
+            />
+            <StyledTag>#{tag}</StyledTag> {edges.length}
           </PageTitle>
         </Col>
       </Row>
