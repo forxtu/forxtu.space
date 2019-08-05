@@ -14,6 +14,12 @@ const eslintrc = {
     ]
   },
   rules: {
+    "react/require-default-props": 0,
+    "react/prop-types": "warn",
+    "object-curly-spacing": "warn",
+    "no-unused-vars": "warn",
+    "implicit-arrow-linebreak": ["warn"],
+    "no-confusing-arrow": 0,
     "global-require": 0,
     "react/jsx-one-expression-per-line": 0,
     "import/prefer-default-export": 0,
@@ -31,13 +37,13 @@ const eslintrc = {
     ],
     "import/no-extraneous-dependencies": [2, { devDependencies: true }],
     "import/no-unresolved": [0, { ignore: ["antd"] }],
-    "no-underscore-dangle": ["error", { allow: ["_id"] }],
+    "no-underscore-dangle": ["warn", { allow: ["_id"] }],
     quotes: [
-      "error",
+      "warn",
       "double",
       { avoidEscape: true, allowTemplateLiterals: true }
     ],
-    "comma-dangle": ["error", "never"],
+    "comma-dangle": ["warn", "never"],
     "import/order": 0
   },
   env: {
