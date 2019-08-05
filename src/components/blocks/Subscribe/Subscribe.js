@@ -3,11 +3,13 @@ import styled from "styled-components";
 import { theme } from "styled-tools";
 import { ToastContainer } from "react-toastify";
 import { FormattedMessage, injectIntl } from "gatsby-plugin-intl";
+import { object, objectOf, shape, string } from "prop-types";
 
 import "react-toastify/dist/ReactToastify.css";
 
 // hooks
-import useSubscribe from "src/hooks/useSubscribe";
+import useSubscribe from "hooks/useSubscribe";
+import useLanguage from "hooks/useLanguage";
 
 // components
 import { Input } from "components/elements/Form";
@@ -20,7 +22,8 @@ const StyledButton = styled(Button)`
 `;
 
 const Subscribe = ({ intl }) => {
-  const { user, userChangeHandler, submitHandler } = useSubscribe();
+  const { language } = useLanguage();
+  const { user, userChangeHandler, submitHandler } = useSubscribe({ language });
 
   return (
     <CardWrapper boxShadow={theme("colors.highlight")}>
@@ -69,6 +72,16 @@ const Subscribe = ({ intl }) => {
       <ToastContainer position="bottom-right" />
     </CardWrapper>
   );
+};
+
+Subscribe.propTypes = {
+  intl: object,
+  formatMessage: objectOf(
+    shape({
+      id: string,
+      defaultMessage: string
+    })
+  )
 };
 
 export default injectIntl(Subscribe);

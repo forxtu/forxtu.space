@@ -1,41 +1,45 @@
 import React from "react";
-import { string, arrayOf, shape } from "prop-types";
+import { string, arrayOf, shape, objectOf } from "prop-types";
 import ReactGA from "react-ga";
-import { FormattedMessage } from "gatsby-plugin-intl";
 
 // utils
 import { gotoPage } from "api/url";
+import { translatedMessage } from "utils/helpers";
 
 // components
 import Dropdown from "./Dropdown";
 import StyledLink from "components/elements/StyledLink";
 
-const NavItem = ({ url, name, list }) => {
-  if (list.length === 0) {
-    return (
+const NavItem = ({ href, title, list }) => (
+  <>
+    {list.length === 0 ? (
       <StyledLink
-        href={url}
-        to={url}
+        href={href}
+        to={href}
         onClick={() => {
           ReactGA.event({
             category: "User",
-            action: `Click nav-menu: ${name.defaultMessage}`
+            action: `Click nav-menu: ${translatedMessage(title.ru, title.en)}`
           });
-          gotoPage(url);
+          gotoPage(href);
         }}
       >
-        <FormattedMessage {...name} />
+        {translatedMessage(title.ru, title.en)}
       </StyledLink>
-    );
-  }
-
-  return <Dropdown title={name} list={list} />;
-};
+    ) : (
+      <Dropdown title={translatedMessage(title.ru, title.en)} list={list} />
+    )}
+  </>
+);
 
 NavItem.propTypes = {
-  url: string.isRequired,
-  name: string.isRequired,
-  id: string.isRequired,
+  title: objectOf(
+    shape({
+      ru: string,
+      en: string
+    })
+  ),
+  href: string,
   list: arrayOf(
     shape({
       title: string,

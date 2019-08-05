@@ -1,24 +1,24 @@
-import React, { useContext } from "react";
+import React from "react";
 import { changeLocale } from "gatsby-plugin-intl";
 import styled from "styled-components";
 import { theme } from "styled-tools";
 
-// utils
-import { LanguageContext } from "components/layouts/Layout";
+// hooks
+import useLanguage from "hooks/useLanguage";
 
 const ChangeLanguage = styled.div`
   display: flex;
   height: 100%;
   align-items: center;
   color: ${theme("colors.header.navItem")};
-  padding-left: 12px;
+  padding-left: 20px;
   font-size: ${theme("sizes.fonts.mediumValuesPlus")};
   cursor: pointer;
   font-weight: 700;
 `;
 
 const LanguageToggler = () => {
-  const { language: currentLanguage } = useContext(LanguageContext);
+  const { language: currentLanguage } = useLanguage();
 
   const languages = {
     ru: {

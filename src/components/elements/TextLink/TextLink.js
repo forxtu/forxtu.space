@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 import { string, node, boolean } from "prop-types";
 import styled, { css } from "styled-components";
 import { theme, switchProp } from "styled-tools";
 import { Link } from "gatsby";
 
 // utils
-import { LanguageContext } from "components/layouts/Layout";
+import { translatedMessage } from "utils/helpers";
 
 const StyledLinkWrapper = styled(Link)`
   color: ${theme("colors.text.link")};
@@ -24,23 +24,19 @@ const StyledLinkWrapper = styled(Link)`
   }
 `;
 
-const TextLink = ({ to, href, children, underline, color }) => {
-  const { language } = useContext(LanguageContext);
-
-  return (
-    <StyledLinkWrapper
-      color={color}
-      underline={underline}
-      href={href}
-      to={language === "ru" ? to : `en/${to}`}
-    >
-      {children}
-    </StyledLinkWrapper>
-  );
-};
+const TextLink = ({ to, href, children, underline, color }) => (
+  <StyledLinkWrapper
+    color={color}
+    underline={underline}
+    href={href}
+    to={translatedMessage(to, `en/${to}`)}
+  >
+    {children}
+  </StyledLinkWrapper>
+);
 
 TextLink.propTypes = {
-  href: string.isRequired,
+  href: string,
   to: string.isRequired,
   children: node.isRequired,
   underline: boolean,

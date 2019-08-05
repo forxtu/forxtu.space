@@ -50,23 +50,31 @@
   "navbarList": [
     {
       "href": "/blog/",
-      "title": "Все статьи",
-      "id": "navbar.blog"
+      "title": {
+        "ru": "Все статьи",
+        "en": "All articles"
+      }
     },
     {
       "href": "/tags/",
-      "title": "Теги",
-      "id": "navbar.tags"
+      "title": {
+        "ru": "Теги",
+        "en": "Tags"
+      }
     },
     {
       "href": "/guestbook/",
-      "title": "Дневник гостей",
-      "id": "navbar.guestbook"
+      "title": {
+        "ru": "Дневник гостей",
+        "en": "Guestbook"
+      }
     },
     {
       "href": "/about/",
-      "title": "О проекте",
-      "id": "navbar.about"
+      "title": {
+        "ru": "О проекте",
+        "en": "About"
+      }
     }
   ],
   "redirectors": [

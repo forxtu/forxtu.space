@@ -2,7 +2,7 @@ import { useState } from "react";
 import addToMailchimp from "gatsby-plugin-mailchimp";
 import { toast } from "react-toastify";
 
-const useSubscribe = () => {
+const useSubscribe = ({ language }) => {
   const [user, setUser] = useState({ name: "", email: "" });
   const [submitResult, setSubmitResult] = useState();
 
@@ -16,11 +16,21 @@ const useSubscribe = () => {
       });
       setSubmitResult(result);
       if (result.result === "success") {
-        toast.success("🔥 Успех! Спасибо за подписку!");
+        toast.success(
+          `${
+            language === "ru"
+              ? "🔥 Успех! Спасибо за подписку!"
+              : "🔥 Success! Thank you for subscribe!"
+          }`
+        );
         setUser({ name: "", email: "" });
       } else {
         toast.error(
-          "😥 Произошла ошибка. Убедитесь в правильности заполнения формы. Возможно данный имейл уже подписан.",
+          `${
+            language === "ru"
+              ? "😥 Произошла ошибка. Убедитесь в правильности заполнения формы. Возможно данный имейл уже подписан."
+              : "😥 Something went wrong. Make sure to fill form properly. Maybe provided email is already subscribed."
+          }`,
           { toastId: "subscribeToast" }
         );
       }
