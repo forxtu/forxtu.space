@@ -4,9 +4,11 @@ import styled from "styled-components";
 import { theme } from "styled-tools";
 import { ThemeProvider } from "src/ThemeContext";
 import { IntlProvider } from "gatsby-plugin-intl";
+import { ToastContainer } from "react-toastify";
 
 // styles
 import GlobalStyles from "styles/globalStyles";
+import "react-toastify/dist/ReactToastify.css";
 
 // components
 import Transition from "components/helpers/Transition";
@@ -39,6 +41,7 @@ const Layout = ({
     <LanguageContext.Provider value={{ language, languages }}>
       <LayoutWrapper className="layout">
         <GlobalStyles />
+        <ToastContainer position="bottom-right" />
         <Head />
         <IntlProvider locale={language}>
           <Navbar

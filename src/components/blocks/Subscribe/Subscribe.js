@@ -1,11 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { theme } from "styled-tools";
-import { ToastContainer } from "react-toastify";
 import { FormattedMessage, injectIntl } from "gatsby-plugin-intl";
 import { object, objectOf, shape, string } from "prop-types";
-
-import "react-toastify/dist/ReactToastify.css";
 
 // hooks
 import useSubscribe from "hooks/useSubscribe";
@@ -69,7 +66,6 @@ const Subscribe = ({ intl }) => {
           id="subscribe.description"
         />
       </Text.H5Title>
-      <ToastContainer position="bottom-right" />
     </CardWrapper>
   );
 };
