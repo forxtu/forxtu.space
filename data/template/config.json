@@ -36,7 +36,7 @@
       "title": "instagram"
     },
     {
-      "href": "http://twitter.com/forxtu",
+      "href": "https://twitter.com/forxtu",
       "title": "twitter"
     },
     {
@@ -50,19 +50,31 @@
   "navbarList": [
     {
       "href": "/blog/",
-      "title": "Все статьи"
+      "title": {
+        "ru": "Все статьи",
+        "en": "All articles"
+      }
     },
     {
       "href": "/tags/",
-      "title": "Теги"
+      "title": {
+        "ru": "Теги",
+        "en": "Tags"
+      }
     },
     {
       "href": "/guestbook/",
-      "title": "Дневник гостей"
+      "title": {
+        "ru": "Дневник гостей",
+        "en": "Guestbook"
+      }
     },
     {
       "href": "/about/",
-      "title": "О проекте"
+      "title": {
+        "ru": "О проекте",
+        "en": "About"
+      }
     }
   ],
   "redirectors": [

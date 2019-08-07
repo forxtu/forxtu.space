@@ -1,0 +1,26 @@
+{
+  "navbar.blog": "Все статьи",
+  "navbar.tags": "Теги",
+  "navbar.guestbook": "Дневник гостей",
+  "navbar.about": "О проекте",
+
+  "sidebar.write_me": "Задайте свой вопрос!",
+  "sidebar.number_of_articles": "Всего статей",
+  "sidebar.last_articles": "Последние статьи",
+  "sidebar.key_links": "Ключевые ссылки",
+
+  "blog.title": "Статьи",
+  "blog_search_placeholder": "Введите название статьи...",
+  "blog.read_more": "Читать далее",
+  "blog.search_result": "Статьи по запросу не найдены",
+  "blog.suggestion": "Возможно вам понравится",
+
+  "subscribe.title": "Подпишись и узнавай о новых статьях первым!",
+  "subscribe.input_name": "Имя",
+  "subscribe.input_email": "Email адрес",
+  "subscribe.button": "Подписаться",
+  "subscribe.description": "Отписаться можно в любое время",
+
+  "tags.title": "Всего тегов",
+  "tags.single_tag_title": "Статей с тегом"
+}

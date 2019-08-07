@@ -1,6 +1,7 @@
 import React from "react";
 import { number } from "prop-types";
 import styled from "styled-components";
+import { FormattedMessage } from "gatsby-plugin-intl";
 
 // components
 import Friend from "../Friend";
@@ -17,7 +18,13 @@ const Wrapper = styled.div`
 const Information = ({ totalCount, posts }) => (
   <Wrapper>
     <hr />
-    <Text.Title>Всего статей: {totalCount}</Text.Title>
+    <Text.Title>
+      <FormattedMessage
+        defaultMessage="Всего статей"
+        id="sidebar.number_of_articles"
+      />
+      : {totalCount}
+    </Text.Title>
     <hr />
     <LatestPost posts={posts} />
     <hr />

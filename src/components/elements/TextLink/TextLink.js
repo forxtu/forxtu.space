@@ -1,27 +1,51 @@
 import React from "react";
-import { string } from "prop-types";
-import styled from "styled-components";
-import { theme } from "styled-tools";
+import { string, node, boolean } from "prop-types";
+import styled, { css } from "styled-components";
+import { theme, switchProp } from "styled-tools";
 import { Link } from "gatsby";
+
+// utils
+import { translatedMessage } from "utils/helpers";
 
 const StyledLinkWrapper = styled(Link)`
   color: ${theme("colors.text.link")};
 
   &:hover {
-    color: ${theme("colors.text.link")};
-    text-decoration: underline;
+    ${switchProp("color", {
+    default: css`
+        color: ${theme("colors.text.default")};
+      `,
+    link: css`
+        color: ${theme("colors.text.link")};
+      `
+  })};
+
+    text-decoration: ${({ underline }) => (underline ? "underline" : "none")};
   }
 `;
 
-const TextLink = ({ to, href, children }) => (
-  <StyledLinkWrapper href={href} to={to}>
+const TextLink = ({ to, href, children, underline, color }) => (
+  <StyledLinkWrapper
+    color={color}
+    underline={underline}
+    href={href}
+    to={translatedMessage(to, `en/${to}`)}
+  >
     {children}
   </StyledLinkWrapper>
 );
 
 TextLink.propTypes = {
-  href: string.isRequired,
-  to: string.isRequired
+  href: string,
+  to: string.isRequired,
+  children: node.isRequired,
+  underline: boolean,
+  color: string
+};
+
+TextLink.defaultProps = {
+  underline: true,
+  color: "link"
 };
 
 export default TextLink;

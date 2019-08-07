@@ -1,11 +1,14 @@
-import React from "react";
-import { object, node } from "prop-types";
+import React, { createContext } from "react";
+import { object, node, array, string } from "prop-types";
 import styled from "styled-components";
 import { theme } from "styled-tools";
 import { ThemeProvider } from "src/ThemeContext";
+import { IntlProvider } from "gatsby-plugin-intl";
+import { ToastContainer } from "react-toastify";
 
 // styles
 import GlobalStyles from "styles/globalStyles";
+import "react-toastify/dist/ReactToastify.css";
 
 // components
 import Transition from "components/helpers/Transition";
@@ -25,15 +28,32 @@ const LayoutWrapper = styled.div`
   }
 `;
 
-const Layout = ({ children, location }) => (
+export const LanguageContext = createContext(null);
+
+const Layout = ({
+  children,
+  location,
+  pageContext: {
+    intl: { language, languages }
+  }
+}) => (
   <ThemeProvider>
-    <LayoutWrapper className="layout">
-      <GlobalStyles />
-      <Head />
-      <Navbar location={location} />
-      <Transition location={location}>{children}</Transition>
-      <Footer />
-    </LayoutWrapper>
+    <LanguageContext.Provider value={{ language, languages }}>
+      <LayoutWrapper className="layout">
+        <GlobalStyles />
+        <ToastContainer position="bottom-right" />
+        <Head />
+        <IntlProvider locale={language}>
+          <Navbar
+            location={location}
+            language={language}
+            languages={languages}
+          />
+        </IntlProvider>
+        <Transition location={location}>{children}</Transition>
+        <Footer />
+      </LayoutWrapper>
+    </LanguageContext.Provider>
   </ThemeProvider>
 );
 
@@ -41,5 +61,14 @@ export default Layout;
 
 Layout.propTypes = {
   children: node.isRequired,
-  location: object.isRequired
+  location: object.isRequired,
+  languages: array,
+  language: string,
+  intl: object,
+  pageContext: object
+};
+
+Layout.defaultProps = {
+  languages: ["ru", "en"],
+  language: "ru"
 };

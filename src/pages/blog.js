@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import styled, { css } from "styled-components";
 import { theme, ifProp } from "styled-tools";
 import { Container, Row, Col } from "styled-bootstrap-grid";
+import { FormattedMessage, injectIntl } from "gatsby-plugin-intl";
 
 // hooks
 import useFilteredPosts from "src/hooks/useFilteredPosts";
@@ -52,7 +53,11 @@ const TagElement = styled.div`
   )};
 `;
 
-const BlogPage = ({ data, location }) => {
+const SearchResult = styled.span`
+  color: ${theme("colors.highlight")};
+`;
+
+const BlogPage = ({ data, location, intl }) => {
   const {
     searchTerm,
     filteredPosts,
@@ -68,7 +73,7 @@ const BlogPage = ({ data, location }) => {
       <StyledRow>
         <Col>
           <Text.H1Title>
-            Статьи
+            <FormattedMessage defaultMessage="Статьи" id="blog.title" />
             <FilterCount>{filteredPosts.length}</FilterCount>
           </Text.H1Title>
         </Col>
@@ -102,7 +107,10 @@ const BlogPage = ({ data, location }) => {
               type="text"
               name="searchTerm"
               value={searchTerm}
-              placeholder="Введите название статьи..."
+              placeholder={intl.formatMessage({
+                defaultMessage: "Введите название статьи...",
+                id: "blog_search_placeholder"
+              })}
               onChange={handleChange}
             />
           </SearchWrapper>
@@ -113,9 +121,12 @@ const BlogPage = ({ data, location }) => {
           ) : (
             <Text.H3Title>
               <br />
-              {`Статьи по запросу ${
-                searchTerm !== "" ? searchTerm : ""
-              } не найдены`}
+              <FormattedMessage
+                defaultMessage="Статьи по запросу не найдены"
+                id="blog.search_result"
+              />
+              {": "}
+              <SearchResult>{searchTerm !== "" ? searchTerm : ""}</SearchResult>
               😥
             </Text.H3Title>
           )}
@@ -131,7 +142,7 @@ const BlogPage = ({ data, location }) => {
   );
 };
 
-export default BlogPage;
+export default injectIntl(BlogPage);
 
 BlogPage.propTypes = {
   data: object.isRequired,

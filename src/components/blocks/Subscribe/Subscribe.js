@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { theme } from "styled-tools";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { FormattedMessage, injectIntl } from "gatsby-plugin-intl";
+import { object, objectOf, shape, string } from "prop-types";
 
 // hooks
-import useSubscribe from "src/hooks/useSubscribe";
+import useSubscribe from "hooks/useSubscribe";
+import useLanguage from "hooks/useLanguage";
 
 // components
 import { Input } from "components/elements/Form";
@@ -17,39 +18,66 @@ const StyledButton = styled(Button)`
   margin: 12px 0;
 `;
 
-const Subscribe = () => {
-  const { user, userChangeHandler, submitHandler } = useSubscribe();
+const Subscribe = ({ intl }) => {
+  const { language } = useLanguage();
+  const { user, userChangeHandler, submitHandler } = useSubscribe({ language });
 
   return (
     <CardWrapper boxShadow={theme("colors.highlight")}>
-      <Text.H3Title>Подпишись и узнавай о новых статьях первым!</Text.H3Title>
+      <Text.H3Title>
+        <FormattedMessage
+          defaultMessage="Подпишись и узнавай о новых статьях первым!"
+          id="subscribe.title"
+        />
+      </Text.H3Title>
       <form id="email-capture" method="post" noValidate>
         <div>
           <Input
-            placeholder="Имя"
+            placeholder={intl.formatMessage({
+              defaultMessage: "Имя",
+              id: "subscribe.input_name"
+            })}
             name="name"
             value={user.name}
             onChange={userChangeHandler}
             required
           />
           <Input
-            placeholder="Email адрес"
+            placeholder={intl.formatMessage({
+              defaultMessage: "Email адрес",
+              id: "subscribe.input_email"
+            })}
             onChange={userChangeHandler}
             required
             name="email"
             value={user.email}
           />
           <StyledButton inverted type="submit" onClick={submitHandler}>
-            Подписаться
+            <FormattedMessage
+              defaultMessage="Подписаться"
+              id="subscribe.button"
+            />
           </StyledButton>
         </div>
       </form>
       <Text.H5Title>
-        Отписаться можно в <i>любое</i> время
+        <FormattedMessage
+          defaultMessage="Отписаться можно в любое время"
+          id="subscribe.description"
+        />
       </Text.H5Title>
-      <ToastContainer position="bottom-right" />
     </CardWrapper>
   );
 };
 
-export default Subscribe;
+Subscribe.propTypes = {
+  intl: object,
+  formatMessage: objectOf(
+    shape({
+      id: string,
+      defaultMessage: string
+    })
+  )
+};
+
+export default injectIntl(Subscribe);

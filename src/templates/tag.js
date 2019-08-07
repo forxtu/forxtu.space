@@ -3,28 +3,35 @@ import { graphql } from "gatsby";
 import styled from "styled-components";
 import { theme } from "styled-tools";
 import { Container, Row, Col } from "styled-bootstrap-grid";
+import { FormattedMessage } from "gatsby-plugin-intl";
+import { object } from "prop-types";
 
 // styles
 import { PageTitle } from "styles/common/globalWrappers";
 
 // components
 import Card from "components/elements/Card";
-import Text from "components/elements/Text";
 import SEO from "components/helpers/SEO";
 
 const StyledTag = styled.span`
   color: ${theme("colors.highlight")};
+  padding: 0 20px;
 `;
 
 const TagPage = ({ data, pageContext }) => {
   const { edges } = data.allMarkdownRemark;
   const { tag } = pageContext;
+
   return (
     <Container>
       <Row>
         <Col>
           <PageTitle>
-            Статей с тегом <StyledTag>#{tag}</StyledTag>: {edges.length}
+            <FormattedMessage
+              defaultMessage="Статей с тегом"
+              id="tags.single_tag_title"
+            />
+            <StyledTag>#{tag}</StyledTag> {edges.length}
           </PageTitle>
         </Col>
       </Row>
@@ -46,6 +53,11 @@ const TagPage = ({ data, pageContext }) => {
 };
 
 export default TagPage;
+
+TagPage.propTypes = {
+  data: object,
+  pageContext: object
+};
 
 export const pageQuery = graphql`
   query tagQuery($tag: [String!]) {

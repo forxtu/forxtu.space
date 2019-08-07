@@ -80,7 +80,7 @@ export const Data = styled.div`
   }
 `;
 
-export const StyledTitle = styled(Link)`
+export const StyledTitle = styled.span`
   color: ${theme("colors.text.title")};
   &:hover {
     text-decoration: none;

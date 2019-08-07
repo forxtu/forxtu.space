@@ -1,65 +1,49 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { Link } from "gatsby";
+import { string, arrayOf, shape, objectOf } from "prop-types";
 import ReactGA from "react-ga";
-import styled from "styled-components";
-import { theme } from "styled-tools";
 
 // utils
 import { gotoPage } from "api/url";
+import { translatedMessage } from "utils/helpers";
 
 // components
 import Dropdown from "./Dropdown";
+import StyledLink from "components/elements/StyledLink";
 
-const StyledLink = styled(Link)`
-  color: ${theme("colors.header.navItem")};
-  border-bottom: 3px solid transparent;
-
-  @media screen and (min-width: 768px) {
-    &:not(:last-child) {
-      margin: 6px 18px 0 18px;
-    }
-
-    &:last-child {
-      margin: 6px 0 0 0;
-    }
-    &:hover {
-      color: ${theme("colors.header.navItem")};
-      text-decoration: none;
-      border-bottom: 3px solid ${theme("colors.highlight")};
-    }
-  }
-`;
-
-const NavItem = ({ url, name, list }) => {
-  if (list.length === 0) {
-    return (
+const NavItem = ({ href, title, list }) => (
+  <>
+    {list.length === 0 ? (
       <StyledLink
-        href={url}
-        to={url}
+        href={href}
+        to={href}
         onClick={() => {
           ReactGA.event({
             category: "User",
-            action: `Click nav-menu: ${name}`
+            action: `Click nav-menu: ${translatedMessage(title.ru, title.en)}`
           });
-          gotoPage(url);
+          gotoPage(href);
         }}
       >
-        {name}
+        {translatedMessage(title.ru, title.en)}
       </StyledLink>
-    );
-  }
-
-  return <Dropdown title={name} list={list} />;
-};
+    ) : (
+      <Dropdown title={translatedMessage(title.ru, title.en)} list={list} />
+    )}
+  </>
+);
 
 NavItem.propTypes = {
-  url: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  list: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string,
-      href: PropTypes.string
+  title: objectOf(
+    shape({
+      ru: string,
+      en: string
+    })
+  ),
+  href: string,
+  list: arrayOf(
+    shape({
+      title: string,
+      href: string
     })
   )
 };
