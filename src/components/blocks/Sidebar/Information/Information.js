@@ -18,13 +18,13 @@ const Wrapper = styled.div`
 const Information = ({ totalCount, posts }) => (
   <Wrapper>
     <hr />
-    <Text.Title>
+    <Text.H4Title>
       <FormattedMessage
         defaultMessage="Всего статей"
         id="sidebar.number_of_articles"
       />
       : {totalCount}
-    </Text.Title>
+    </Text.H4Title>
     <hr />
     <LatestPost posts={posts} />
     <hr />

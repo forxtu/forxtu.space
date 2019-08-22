@@ -17,12 +17,12 @@ const toLower = urlVal => urlVal && `${urlVal.toLowerCase()}/`;
 
 const LatestPost = ({ posts }) => (
   <Wrapper>
-    <Text.Title>
+    <Text.H4Title>
       <FormattedMessage
         defaultMessage="Последние статьи"
         id="sidebar.last_articles"
       />
-    </Text.Title>
+    </Text.H4Title>
     {posts.map(
       ({
         node: {

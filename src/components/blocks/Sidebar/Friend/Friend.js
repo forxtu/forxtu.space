@@ -20,12 +20,12 @@ const { friends = [] } = config;
 
 const Friend = () => (
   <Wrapper>
-    <Text.Title>
+    <Text.H4Title>
       <FormattedMessage
         defaultMessage="Ключевые ссылки"
         id="sidebar.key_links"
       />
-    </Text.Title>
+    </Text.H4Title>
     {friends.map(friend => (
       <ExternalLink
         href={friend.href}
