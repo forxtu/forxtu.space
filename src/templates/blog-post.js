@@ -106,7 +106,7 @@ const BlogPost = ({ data }) => {
           title={title}
           url={slug}
           siteTitleAlt="FX2 Blog"
-          isPost={false}
+          isPost
           description={excerpt}
           image={headerImage || defaultPostHeaderImage}
         />
