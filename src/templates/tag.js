@@ -45,7 +45,7 @@ const TagPage = ({ data, pageContext }) => {
 
       <SEO
         title={tag}
-        url={`${config.url}/tag/${tag}`}
+        url={`${config.url}/tag/${tag.toLowerCase()}`}
         siteTitleAlt="Forxtu Blog"
         isPost={false}
         description={tag}
