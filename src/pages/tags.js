@@ -9,6 +9,9 @@ import { FormattedMessage } from "gatsby-plugin-intl";
 // hooks
 import useGetTags from "src/hooks/useGetTags";
 
+// utils
+import { config } from "../../data";
+
 // styles
 import { PageTitle } from "styles/common/globalWrappers";
 
@@ -55,7 +58,7 @@ const TagPage = ({ data }) => {
 
       <SEO
         title="Теги"
-        url="/tags/"
+        url={`${config.url}/tags/`}
         siteTitleAlt="Forxtu Blog"
         isPost={false}
         description="Страница тегов"

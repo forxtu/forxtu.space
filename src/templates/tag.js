@@ -6,6 +6,9 @@ import { Container, Row, Col } from "styled-bootstrap-grid";
 import { FormattedMessage } from "gatsby-plugin-intl";
 import { object } from "prop-types";
 
+// utils
+import { config } from "../../data";
+
 // styles
 import { PageTitle } from "styles/common/globalWrappers";
 
@@ -42,7 +45,7 @@ const TagPage = ({ data, pageContext }) => {
 
       <SEO
         title={tag}
-        url={`/tag/${tag}`}
+        url={`${config.url}/tag/${tag}`}
         siteTitleAlt="Forxtu Blog"
         isPost={false}
         description={tag}

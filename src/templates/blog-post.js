@@ -104,7 +104,7 @@ const BlogPost = ({ data }) => {
 
         <SEO
           title={title}
-          url={slug}
+          url={`${config.url}/${slug}`}
           siteTitleAlt="FX2 Blog"
           isPost
           description={excerpt}
