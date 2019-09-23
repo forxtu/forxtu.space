@@ -3,7 +3,7 @@
   "meta": {
     "favicon": "https://raw.githubusercontent.com/forxtu/forxtu.space/master/static/assets/favicon.png",
     "keyword": "forxtu, blog, JavaScript",
-    "description": "FORXTU блог о программировании, в основном фронт-енд",
+    "description": "FORXTU блог о программировании. Самые актуальные технологии и интересующие вопросы!",
     "theme_color": "#384f7c",
     "google_site_verification": "Qt-VT3iFNkYhuGwBDYdD-eA7xeOjaCtgOPyPL6yB6Dc"
   },
@@ -91,5 +91,7 @@
     }
   ],
   "githubUsername": "forxtu",
-  "maxPostsInPage": 10
+  "maxPostsInPage": 10,
+  "fbAppId": "forxtu",
+  "twitterCreator": "@forxtu"
 }

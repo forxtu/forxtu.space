@@ -5,7 +5,7 @@ import { string, bool } from "prop-types";
 // utils
 import config from "../../../../data";
 
-const schemaOrgJSONLD = ({
+const schemaOrgJSON = ({
   url,
   title,
   siteTitleAlt,
@@ -54,6 +54,8 @@ const schemaOrgJSONLD = ({
     : {}
 ];
 
+const imageUrlPlaceholder = "https://raw.githubusercontent.com/forxtu/forxtu.space/master/static/assets/517668112.jpg";
+
 const SEO = ({ url, title, description, image, siteTitleAlt, isPost }) => (
   <Helmet>
     <title>{title}</title>
@@ -64,7 +66,7 @@ const SEO = ({ url, title, description, image, siteTitleAlt, isPost }) => (
 
     {/* Schema.org tags */}
     <script type="application/ld+json">
-      {JSON.stringify(schemaOrgJSONLD(url, title, siteTitleAlt, isPost))}
+      {JSON.stringify(schemaOrgJSON(url, title, siteTitleAlt, isPost))}
     </script>
 
     {/* OpenGraph tags */}
@@ -76,21 +78,17 @@ const SEO = ({ url, title, description, image, siteTitleAlt, isPost }) => (
     )}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
-    <meta
-      property="fb:app_id"
-      content={config.siteFBAppID ? config.siteFBAppID : ""}
-    />
+    <meta property="og:image" content={image || imageUrlPlaceholder} />
+    <meta property="fb:app_id" content={config.fbAppId || "forxtu"} />
 
     {/* Twitter Card tags */}
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:creator"
-      content={config.twitter_username ? config.twitter_username : ""}
-    />
+    <meta name="twitter:site" content={config.twitterCreator || "@forxtu"} />
+    <meta name="twitter:creator" content={config.twitterCreator || "@forxtu"} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={image} />
+    <meta name="twitter:image" content={image || imageUrlPlaceholder} />
+    <meta name="twitter:image:alt" content={title} />
   </Helmet>
 );
 
