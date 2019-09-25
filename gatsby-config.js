@@ -98,6 +98,14 @@ module.exports = {
       resolve: "gatsby-plugin-sitemap"
     },
     {
+      resolve: `gatsby-plugin-yandex-metrika`,
+      options: {
+        trackingId: "53406244",
+        webvisor: true,
+        trackHash: true
+      }
+    },
+    {
       resolve: "gatsby-plugin-mailchimp",
       options: {
         endpoint:
