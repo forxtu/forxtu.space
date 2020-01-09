@@ -106,6 +106,12 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://forxtu.space`
+      }
+    },
+    {
       resolve: "gatsby-plugin-mailchimp",
       options: {
         endpoint:
